@@ -1,0 +1,150 @@
+/* SellerCalc v3 look, sitewide: Bilal's uploaded home design language on every page. */
+/* Palette: deep navy ink, royal blue, light blue, orange for CTAs/accents only. Solid colors, no neon, no stars, no orbs. Content and calculator logic untouched — look only, via CSS. */
+html[data-theme="light"]{
+  --bg1:#0A1128!important; --bg2:#0B1526!important; --bg:#0A1128!important; --dark:#0A1128!important;
+  --ink:#F8FAFC!important; --ink2:#F8FAFC!important; --txt:#F8FAFC!important;
+  --mut:rgba(226,232,240,.85)!important; --mut2:#94A3B8!important;
+  --line:rgba(147,197,253,.28)!important; --line2:rgba(147,197,253,.22)!important;
+  --card:rgba(23,37,84,.55)!important; --card-solid:#132144!important;
+  --acc:#BFDBFE!important; --gold:#F97316!important;
+  --primary:#1D4ED8!important; --secondary:#3B82F6!important; --accent:#F97316!important;
+  --tert:#DBEAFE!important; --result-bg:#132144!important; --result-ink:#F8FAFC!important;
+}
+html{background:#0A1128!important}
+body{background:radial-gradient(1200px 600px at 50% -10%, rgba(29,78,216,.30), transparent 60%), #0A1128!important; background-attachment:fixed!important; color:#E2E8F0!important}
+/* Header: v3 navy bar, sticky, orange logo + dot, light-blue nav */
+header{background:linear-gradient(180deg,#0C2458,#0A1F4D)!important; position:sticky!important; top:0!important; z-index:50!important; border-bottom:1px solid rgba(255,255,255,.09)!important; box-shadow:0 10px 28px -14px rgba(10,31,77,.6)!important}
+.logo{display:inline-flex!important; align-items:center!important}
+.logo .mix{color:#F97316!important}
+.logo::after{content:""; width:7px; height:7px; border-radius:50%; background:#FF8A3D; margin-left:7px; box-shadow:0 0 0 3px rgba(249,115,22,.22)}
+.nav-links a{color:#BFDBFE!important}
+.nav-links a:hover{color:#FFFFFF!important}
+.nav-links a .mix{color:#BFDBFE!important}
+.nav-links a:hover .mix{color:#FFFFFF!important}
+/* Headings: solid, no gradient text */
+h1{color:#FFFFFF!important}
+h1 .red-word{color:#BFDBFE!important}
+h2,h3{color:#BFDBFE!important}
+.hero-sub{color:#CBD5E1!important}
+h1,h2,h3,.cat-box b,.calc-card b,.feat-grid b,footer b,footer a,.mix,.mix b,
+.card h1,.card h2,.card h3,.tool h1,.tool h2,.tool h3,.cta-grad h2,.cta-grad h3{
+  background:none!important; -webkit-background-clip:initial!important; background-clip:initial!important; -webkit-text-fill-color:currentColor!important;
+}
+/* Links */
+main a{color:#93C5FD!important}
+main a:hover{color:#DBEAFE!important}
+/* Category badge */
+.cat{color:#F97316!important; font-weight:800!important}
+/* Tool cards: v3 dark glass panel */
+.card,.tool{background:rgba(8,24,58,.72)!important; border:1px solid rgba(255,255,255,.28)!important; border-radius:18px!important; color:#E2E8F0!important; box-shadow:0 28px 48px -18px rgba(4,12,38,.7), inset 0 1px 0 rgba(255,255,255,.18)!important; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px)}
+/* Category / calculator cards: v3 dir-card language */
+.calc-card,.cat-box{background:#132144!important; border:1.5px solid rgba(147,197,253,.28)!important; border-radius:18px!important; color:#E2E8F0!important; box-shadow:0 10px 30px rgba(0,0,0,.35)!important; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.calc-card:hover,.cat-box:hover{transform:translateY(-3px)!important; border-color:#F5C08A!important; box-shadow:0 16px 36px rgba(0,0,0,.45)!important}
+.calc-card b{color:#FFFFFF!important}
+.calc-card p,.calc-card .mut,.card .mut,.tool .mut{color:#94A3B8!important}
+.cat-box b{color:#FFFFFF!important}
+.cat-box p{color:#CBD5E1!important}
+.cat-box-count{color:#BFDBFE!important}
+.cat-box-go{color:#F97316!important}
+/* Accent words stay brand orange */
+.mix,.mix b{color:#F97316!important}
+.mut{color:#94A3B8!important}
+/* Tool pages: labels, inputs, results */
+label{color:#F8FAFC!important}
+input,select{background:#0A1128!important; color:#F8FAFC!important; border:1px solid rgba(147,197,253,.35)!important}
+input::placeholder{color:#94A3B8!important}
+input:focus,select:focus{border-color:#F97316!important; box-shadow:0 0 0 4px rgba(249,115,22,.16)!important; outline:none!important}
+.result{background:#132144!important; border:1px solid rgba(147,197,253,.35)!important; border-left:4px solid #F97316!important; color:#FFFFFF!important}
+.result small{color:#94A3B8!important}
+/* FAQ block: v3 card */
+.faq{background:#132144!important; border:1.5px solid rgba(147,197,253,.28)!important; border-radius:14px!important; padding:22px!important; box-shadow:0 10px 30px rgba(0,0,0,.35)!important; color:#E2E8F0!important}
+.faq h3{color:#FFFFFF!important}
+.faq p{color:#CBD5E1!important}
+/* Feature cards: v3 feat language */
+.feat-grid>div{background:#132144!important; border:1.5px solid rgba(147,197,253,.28)!important; border-radius:18px!important; box-shadow:0 10px 30px rgba(0,0,0,.35)!important; padding:22px!important; transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease}
+.feat-grid>div:hover{transform:translateY(-4px)!important; border-color:#F5C08A!important; box-shadow:0 16px 36px rgba(0,0,0,.45)!important}
+.feat-grid>div b{color:#FFFFFF!important}
+.feat-grid>div p{color:#CBD5E1!important}
+table{color:#E2E8F0!important}
+th{color:#FFFFFF!important}
+td,th{border-color:rgba(147,197,253,.25)!important}
+/* Hero mini scientific calculator (home only, kept for completeness) */
+.mini-sci{background:#0B1526!important; border:1px solid rgba(147,197,253,.45)!important; box-shadow:0 12px 32px rgba(0,0,0,.4)!important}
+.mini-sci-head{color:#FFFFFF!important}
+.mini-display{background:#0A1128!important; color:#FFFFFF!important; border:1px solid rgba(147,197,253,.3)!important}
+.mini-display .out{color:#F97316!important}
+.keys button{background:rgba(23,37,84,.7)!important; color:#F8FAFC!important; border:1px solid rgba(147,197,253,.25)!important}
+.keys button:hover{border-color:rgba(147,197,253,.6)!important; background:rgba(29,78,216,.45)!important}
+.keys .k-op,.keys .k-fn{background:#1D4ED8!important; color:#FFFFFF!important}
+.keys .k-eq{background:#F97316!important; color:#0B1526!important; font-weight:800}
+.mini-sci .deg-btn{background:#1D4ED8!important; color:#FFFFFF!important}
+/* CTA band: v3 navy gradient panel, orange button */
+.cta-grad{background:linear-gradient(125deg,#081C42 0%,#0B2A9B 45%,#1640D6 100%)!important; border:1px solid rgba(255,255,255,.14)!important; border-radius:24px!important; color:#FFFFFF!important; animation:none!important; box-shadow:0 30px 44px -18px rgba(4,12,38,.7)!important}
+.cta-grad h2{color:#FFFFFF!important}
+.cta-grad p{color:#DCE6FF!important}
+.cta-btn{background:#F97316!important; color:#0B1526!important; font-weight:800}
+.cta-btn:hover{background:#FB923C!important; transform:translateY(-2px)}
+/* Calm dots: no flicker animation */
+.flicker i{animation:none!important; background:#F97316!important; opacity:.9}
+/* Footer: v3 navy bar + orange top border, BuildCalc-style grid */
+footer{background:linear-gradient(180deg,#0C2458,#0A1F4D)!important; border-top:3px solid #F97316!important; color:#94A3B8!important}
+footer a{color:#BFDBFE!important}
+.footer-grid b{color:#FFFFFF!important}
+.footer-grid p{color:#94A3B8!important}
+.footer-grid a{color:#BFDBFE!important}
+.footer-grid a:hover{color:#FFFFFF!important}
+/* Floating buttons (SellerCalc live stacking) */
+.chatbtn{box-shadow:0 10px 30px rgba(0,0,0,.45)!important}
+.chatbtn:hover{filter:brightness(1.15); transform:translateY(-1px)}
+#topBtn{background:#172554!important; color:#FFFFFF!important; border:2px solid #F97316!important}
+#topBtn:hover{background:#F97316!important; color:#0B1526!important}
+
+/* Inner-page link visibility (same v3 language) */
+.card a,.calc-card a,.tool a{color:#93C5FD!important}
+.card a:hover,.calc-card a:hover,.tool a:hover{color:#DBEAFE!important}
+.calc-card .cat{color:#F97316!important}
+/* Scientific keypad (fn/op/eq classes) + calc panel */
+.calc{background:rgba(8,24,58,.72)!important; border:1px solid rgba(255,255,255,.28)!important; border-radius:18px!important; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); padding:15px!important; box-shadow:0 28px 48px -18px rgba(4,12,38,.7), inset 0 1px 0 rgba(255,255,255,.18)!important; max-width:520px; width:100%}
+.calc-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; gap:10px}
+.calc-top .t{color:#FFFFFF!important; font-weight:700; font-size:14.5px}
+.display{background:#0A1128!important; border:1px solid rgba(147,197,253,.25)!important; border-radius:12px; padding:10px 12px}
+.display .expr{color:#A9BCEC!important; font-size:13.5px; min-height:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.display .val{color:#FFFFFF!important; font-size:30px; font-weight:700; line-height:1.15; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.deg{background:#1D4ED8!important; color:#FFFFFF!important; border:0; border-radius:9px; font-weight:700; font-size:12.5px; padding:0 16px; min-height:38px; cursor:pointer}
+.keys button.fn,.keys button.op{background:#1D4ED8!important; color:#FFFFFF!important}
+.keys button.eq{background:#F97316!important; color:#0B1526!important; font-weight:800}
+
+/* v3 contrast fixes (Bilal-approved plan 2026-11-01): solid dark panels + white text, no pale hover */
+main .feat-grid>div, .feat-grid>div{background:#132144!important; border:1.5px solid rgba(147,197,253,.28)!important; color:#E2E8F0!important}
+main .feat-grid>div:hover, .feat-grid>div:hover{background:#132144!important; border-color:#F5C08A!important; color:#E2E8F0!important; transform:translateY(-4px)!important; box-shadow:0 16px 36px rgba(0,0,0,.45)!important}
+main .feat-grid>div b, .feat-grid>div b{color:#FFFFFF!important}
+main .feat-grid>div p, .feat-grid>div p{color:#CBD5E1!important}
+main .card, main .tool{background:rgba(8,24,58,.92)!important; border:1px solid rgba(255,255,255,.28)!important; color:#E2E8F0!important}
+main .card label, main .tool label, .card label, .tool label{color:#F8FAFC!important}
+main .result, .card .result{background:#132144!important; border:1px solid rgba(147,197,253,.35)!important; border-left:4px solid #F97316!important; color:#FFFFFF!important}
+main .cta-btn, .cta-grad .cta-btn{background:#F97316!important; color:#0B1526!important; border:2px solid #C2410C!important}
+main .cta-btn:hover, .cta-grad .cta-btn:hover{background:#FB923C!important; color:#0B1526!important}
+.card>button, .tool>button{background:#1D4ED8!important; color:#FFFFFF!important}
+main section p, .faq p{color:#CBD5E1!important}
+main .faq h3, .faq h3{color:#FFFFFF!important}
+footer p, .footer-grid p{color:#94A3B8!important}
+.keys{display:grid!important; grid-template-columns:repeat(5,1fr)!important; gap:10px!important}
+.calc{max-width:520px!important; padding:16px!important}
+.calc .keys{gap:8px!important}
+.calc .keys button{min-height:46px!important; font-size:15px!important}
+.calc .display .val{font-size:28px!important}
+.calc .calc-top .t{font-size:15px!important}
+.calc .deg{min-height:40px!important; font-size:13px!important}
+
+/* v3 definition text white (Bilal 2026-11-01): every definition/body paragraph pure white site-wide, links brighter */
+main p, main li, main section p, .faq p, .card p, .tool p, .calc-card p, .cat-box p, .mut, .card .mut, .tool .mut, .calc-card .mut, .result small {color:#FFFFFF!important}
+.card a, .calc-card a, .tool a, .card .tools a {color:#BFDBFE!important}
+.card a:hover, .calc-card a:hover, .tool a:hover {color:#FFFFFF!important}
+.footer-grid p, footer p {color:#CBD5E1!important}
+
+/* v5 result + bot stacking (Bilal 2026-11-01): result text white beats base #out ID rule; chat panel above back-to-top */
+#out, .calc-box #out, main #out, .card #out {color:#FFFFFF!important}
+.chatpanel{z-index:70!important}
+
+/* v6 CTA span fix (Bilal 2026-11-01): .mix span inside the orange CTA button was orange-on-orange; force dark text, logo .mix untouched */
+.cta-btn .mix, .cta-grad .cta-btn .mix {color:#0B1526!important; -webkit-text-fill-color:#0B1526!important; background:none!important}

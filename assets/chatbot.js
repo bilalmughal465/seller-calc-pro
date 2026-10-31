@@ -28,7 +28,7 @@ function answerFree(t){
 send.onclick=function(){ if(!inp.value.trim()) return; answerFree(inp.value); inp.value=""; };
 inp.addEventListener("keydown",function(e){ if(e.key==="Enter"){ send.click(); } });
 body.appendChild(inp); body.appendChild(send); panel.appendChild(body);
-btn.onclick=function(){ panel.style.display = panel.style.display==="none" ? "block" : "none"; };
+btn.onclick=function(){ var open = panel.style.display==="none"; panel.style.display = open ? "block" : "none"; var tb=document.getElementById("topBtn"); if(tb) tb.style.display = open ? "none" : ""; };
 document.body.appendChild(btn); document.body.appendChild(panel);
 say("Bot","Hello! I am SellerCalc's FAQ bot. Pick a question from the list above.");
 })();
