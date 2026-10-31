@@ -1,0 +1,1612 @@
+[
+  {
+    "item": "FBA fuel and logistics surcharge",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source citing Amazon's announcement; not fetched from an official Amazon page directly.",
+    "platform": "Amazon",
+    "source_url": "https://myrealprofit.com/amazon-fba-profit-calculator/",
+    "value": "3.5% of the FBA fulfillment fee, since 17 April 2026 (US and Canada)",
+    "verified": false,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "FBA fulfillment fee tiers",
+    "last_checked": "2026-10-31",
+    "note": "Third-party 2026 summaries disagree on exact per-tier figures ($3.06-$3.65 for small standard) and Amazon adds a 3.5% fuel surcharge plus seasonal peak rates, so no tier table is presented as fact. User enters their tier fee; page instructs checking Seller Central's Revenue Calculator.",
+    "platform": "Amazon",
+    "source_url": "https://sell.amazon.com/blog/ask/fees-selling-on-amazon",
+    "value": "NOT HARD-CODED — calculator takes the fee as a user input from Amazon's current FBA rate card",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "FBA monthly storage, dangerous goods",
+    "last_checked": "2026-10-31",
+    "note": "Quoted from Seller Central by the guide; calculator covers non-dangerous goods only, so these rates are recorded for reference and not used in the tool.",
+    "platform": "Amazon",
+    "source_url": "https://www.zonguru.com/blog/selling-on-amazon-fees",
+    "value": "Standard-size $0.99 Jan-Sep / $3.63 Oct-Dec; oversize $0.78 Jan-Sep / $2.43 Oct-Dec",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "FBA monthly storage, oversize non-dangerous goods",
+    "last_checked": "2026-10-31",
+    "note": "Same corroboration caveat as the standard-size rate above.",
+    "platform": "Amazon",
+    "source_url": "https://amzbase.com/guides/amazon-fba-storage-fees/",
+    "value": "$0.56 per cubic foot January-September; $1.40 October-December",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "FBA monthly storage, standard size",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source citing Amazon's 2026 FBA rate cards; not fetched from an official Amazon page directly.",
+    "platform": "Amazon",
+    "source_url": "https://myrealprofit.com/amazon-fba-profit-calculator/",
+    "value": "$0.78 per cubic foot Jan-Sep, $2.40 per cubic foot Oct-Dec",
+    "verified": false,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "FBA monthly storage, standard-size",
+    "last_checked": "2026-10-31",
+    "note": "Corroborated by multiple 2026 reads of Seller Central storage pages; confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://spacegoats.io/space-wiki/what-is-fba/",
+    "value": "$0.78 per cubic foot (Jan-Sep), $2.40 per cubic foot (Oct-Dec) — referenced in page text only, not used in calculator math",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "FBA monthly storage, standard-size non-dangerous goods",
+    "last_checked": "2026-10-31",
+    "note": "Rate card quoted directly from Amazon Seller Central's monthly inventory storage fees page by multiple independent guides (checked September-October 2026); the Seller Central help URL itself was not returned by search, so marked unverified and the page tells sellers to confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://amzbase.com/guides/amazon-fba-storage-fees/",
+    "value": "$0.78 per cubic foot January-September; $2.40 October-December",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Media closing fee (books, music, video, DVD, software)",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://feedvisor.com/university/amazon-fees/",
+    "value": "$1.80 per item",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Professional selling plan",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source citing Amazon's official pricing page; not fetched from an official Amazon page directly.",
+    "platform": "Amazon",
+    "source_url": "https://sell.amazon.com/blog/ask/fees-selling-on-amazon",
+    "value": "$39.99/month; Individual plan $0.99 per item sold",
+    "verified": true,
+    "notes": "[verified by batch3; earlier batch flagged unverified]",
+    "sources_batches": [
+      "batch2",
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee minimum",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source citing Amazon's official schedule; not fetched from an official Amazon page directly.",
+    "platform": "Amazon",
+    "source_url": "https://blog.sellermagnet.com/post/amazon-referral-fees-by-category-2026/en",
+    "value": "$0.30 per item in most categories",
+    "verified": false,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Amazon Device Accessories",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://novadata.io/resources/blog/amazon-seller-fees-explained",
+    "value": "45% of total sale price",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, Electronics & Computers",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://novadata.io/resources/blog/amazon-seller-fees-explained",
+    "value": "8% of total sale price",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, most categories",
+    "last_checked": "2026-10-31",
+    "note": "Amazon's Seller Central fee pages require seller sign-in and could not be fetched directly; figure is from a secondary source citing Amazon's official US pricing page. Guide text tells readers to confirm in Seller Central.",
+    "platform": "Amazon",
+    "source_url": "https://blog.sellermagnet.com/post/amazon-referral-fees-by-category-2026/en | https://novadata.io/resources/blog/amazon-seller-fees-explained",
+    "value": "15% of total sales price",
+    "verified": false,
+    "sources_batches": [
+      "batch2",
+      "batch3"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Athletic shoes $150 or more",
+    "value": "8%, no per-order fee",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Books, Movies & TV, Music (exceptions noted)",
+    "value": "15.3% up to $7,500 per item, then 2.35% above $7,500",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Coins & Paper Money except Bullion; select trading cards",
+    "value": "13.25% up to $7,500 per item, then 2.35% above $7,500",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Guitars & Basses",
+    "value": "6.7% up to $7,500, then 2.35% above $7,500",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Heavy equipment (listed Business & Industrial categories)",
+    "value": "3% up to $15,000, then 0.5% above $15,000",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Jewelry & Watches",
+    "value": "15% up to $5,000, then 9% above $5,000",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — most categories (no Store)",
+    "value": "13.6% up to $7,500 per item, then 2.35% above $7,500",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — NFT categories listed by eBay",
+    "value": "5%",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Final value fee — Women's Bags & Handbags",
+    "value": "15% up to $2,000, then 9% above $2,000",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Final value fee, Athletic shoes $150 or more",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "8%, no per-order fee; under $150 the most-categories rate applies",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Final value fee, Books/Movies/Music (except vinyl)",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "15.3% up to $7,500, then 2.35%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Final value fee, Guitars & Basses",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "6.7% up to $7,500, then 2.35%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Final value fee, Jewelry & Watches",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "15% up to $5,000, then 9%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Final value fee, most categories",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "13.6% of total sale up to $7,500 per item, then 2.35% above $7,500",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Final value fee, most categories, no Store",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "13.6% + $0.40 per order over $10 ($0.30 at $10 or less)",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Final value fee, Trading cards / Coins & Paper Money",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "value": "13.25% up to $7,500, then 2.35%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Insertion fee",
+    "value": "First 250 listings free per month, then $0.35 per listing",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch2"
+    ]
+  },
+  {
+    "item": "Insertion fee above free listing allowance",
+    "last_checked": "2026-10-31",
+    "note": "Consistently reported from eBay's fee schedule by seller guides; the official store-fees page returned by search confirms tiers, while the $0.35 figure comes from corroborating guides, so marked unverified.",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$0.35 per listing in most categories",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "International fee (not using eBay International Shipping)",
+    "value": "1.65% of total amount of the sale",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "eBay",
+    "item": "Per-order fee",
+    "value": "$0.30 for orders $10 or less; $0.40 for orders over $10",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch2"
+    ]
+  },
+  {
+    "item": "Promoted Listings General minimum ad rate",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://blog.ordoro.com/2026/10/07/ebay-promoted-listings-ad-rates-2026/",
+    "value": "2% (widely reported; NOT confirmed from a live ebay.com help page in this batch)",
+    "verified": false,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Promoted Listings Standard (General) ad fee basis",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://pages.ebay.co.uk/promote-your-listings/FAQ/B2C/",
+    "value": "Seller-chosen ad rate as a percentage of the total sale amount, charged when a buyer clicks a promoted listing and buys within 30 days",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Store subscription, Anchor",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$299.95/month yearly renewal, $349.95/month monthly renewal; 25,000 free fixed-price listings; 12.7% final value fee in most categories",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Store subscription, Basic",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$21.95/month yearly renewal, $27.95/month monthly renewal; 1,000 free fixed-price listings; 12.7% final value fee in most categories",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Store subscription, Enterprise",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$2,999.95/month yearly renewal only; 100,000 free fixed-price listings; 12.7% final value fee in most categories",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Store subscription, Premium",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$59.95/month yearly renewal, $74.95/month monthly renewal; 10,000 free fixed-price listings; 12.7% final value fee in most categories",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Store subscription, Starter",
+    "last_checked": "2026-10-31",
+    "platform": "eBay",
+    "source_url": "https://www.ebay.com/help/selling/fees-credits-invoices/store-selling-fees-managed-payments-sellers?id=4809",
+    "value": "$4.95/month yearly renewal, $7.95/month monthly renewal; 250 free fixed-price listings; no final value fee discount",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Currency conversion fee",
+    "value": "2.5% when listing currency differs from payout currency",
+    "source_url": "https://www.etsy.com/legal/fees/ | https://www.etsy.com/sg-en/legal/fees/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch2"
+    ]
+  },
+  {
+    "item": "Etsy Ads cost per click",
+    "last_checked": "2026-10-31",
+    "note": "No fixed CPC asserted anywhere on the page; the $0.40 in the worked example is the example's own spend divided by its own clicks.",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/360033701174-How-to-Set-Up-and-Manage-an-Etsy-Ads-Campaign",
+    "value": "Not published by Etsy; calculator uses the seller's own dashboard CPC as an input",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Etsy Ads minimum daily budget",
+    "last_checked": "2026-10-31",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/360033701174-How-to-Set-Up-and-Manage-an-Etsy-Ads-Campaign",
+    "value": "$1",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Etsy Ads new-shop waiting period and starting maximum daily budget",
+    "last_checked": "2026-10-31",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/360033701174-How-to-Set-Up-and-Manage-an-Etsy-Ads-Campaign",
+    "value": "15-day wait after opening; $25 starting maximum, recalculated weekly",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Etsy Plus subscription",
+    "value": "$10 per month (optional)",
+    "source_url": "https://www.etsy.com/legal/fees/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Listing fee",
+    "value": "$0.20 per listing",
+    "source_url": "https://www.etsy.com/legal/fees/ | https://help.etsy.com/hc/en-gb/articles/360035902374-Etsy-Fee-Basics",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch2"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Offsite Ads fee",
+    "value": "15% under $10,000 in prior 365 days; 12% at or above $10,000; capped at $100 per order",
+    "source_url": "https://www.etsy.com/legal/fees/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Offsite Ads fee ($10,000 or more in past 365 days, mandatory)",
+    "last_checked": "2026-10-31",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": "12% of order total, capped at $100 per order",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Offsite Ads fee (under $10,000 in past 365 days)",
+    "last_checked": "2026-10-31",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": "15% of order total, capped at $100 per order",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Payment processing fee (US)",
+    "value": "3% + $0.25 per order",
+    "source_url": "https://www.etsy.com/legal/fees/ | https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch2"
+    ]
+  },
+  {
+    "item": "Transaction fee",
+    "last_checked": "2026-10-31",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": "6.5% of item price plus shipping and gift wrap charged",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "platform": "Etsy",
+    "item": "Transaction fee (US)",
+    "value": "6.5% of item price plus shipping and gift wrap charged",
+    "source_url": "https://www.etsy.com/legal/fees/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor — domestic and international (inches/pounds)",
+    "last_checked": "2026-10-31",
+    "platform": "FedEx",
+    "source_url": "https://www.fedex.com/en-ca/resources-tools/dimensional-weight.html",
+    "value": "139",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor — metric (cm/kg)",
+    "last_checked": "2026-10-31",
+    "platform": "FedEx",
+    "source_url": "https://www.fedex.com/en-ca/resources-tools/dimensional-weight.html",
+    "value": "5000",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "platform": "Mercari",
+    "item": "Buyer Protection fee (buyer-paid)",
+    "value": "3.6% of item price plus buyer-paid shipping",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Buyer Protection fee (buyer-paid, not deducted from seller payout)",
+    "last_checked": "2026-10-31",
+    "platform": "Mercari",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "value": "3.6% of item price + buyer-paid shipping",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "platform": "Mercari",
+    "item": "Instant Pay fee",
+    "value": "$3 per cash-out",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "Mercari",
+    "item": "Listing fee",
+    "value": "Free",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Seller payment-processing fee",
+    "last_checked": "2026-10-31",
+    "platform": "Mercari",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "value": "None on current listings",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "platform": "Mercari",
+    "item": "Selling fee",
+    "value": "10% of item price plus buyer-paid shipping",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/ | https://sellercounter.com/mercari-fee-calculator/",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1",
+      "batch5"
+    ],
+    "notes": "Note: one batch flagged this unverified (official page not returned in its search); two other batches verified it from the Mercari Help Center — kept verified. Note: one batch flagged this unverified (official page not returned in its search); two other batches verified it from the Mercari Help Center — kept verified."
+  },
+  {
+    "item": "Selling fee (listings created/updated on or after 2025-01-06)",
+    "last_checked": "2026-10-31",
+    "platform": "Mercari",
+    "source_url": "https://www.mercari.com/us/help_center/article/169/",
+    "value": "10% of item price + buyer-paid shipping",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ],
+    "notes": "Note: one batch flagged this unverified (official page not returned in its search); two other batches verified it from the Mercari Help Center — kept verified. Note: one batch flagged this unverified (official page not returned in its search); two other batches verified it from the Mercari Help Center — kept verified."
+  },
+  {
+    "item": "Additional percentage fee for international commercial transactions",
+    "last_checked": "2026-10-31",
+    "platform": "PayPal",
+    "source_url": "https://www.paypal.com/us/business/paypal-business-fees",
+    "value": "+1.50%",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "PayPal Checkout / Guest Checkout / Venmo — US domestic",
+    "last_checked": "2026-10-31",
+    "platform": "PayPal",
+    "source_url": "https://www.paypal.com/us/business/paypal-business-fees",
+    "value": "3.49% + $0.49 fixed fee (USD)",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Send/Receive Money for Goods and Services — US domestic",
+    "last_checked": "2026-10-31",
+    "platform": "PayPal",
+    "source_url": "https://www.paypal.com/us/business/paypal-business-fees",
+    "value": "2.99% (no fixed fee listed)",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Standard credit and debit card payments — US domestic",
+    "last_checked": "2026-10-31",
+    "platform": "PayPal",
+    "source_url": "https://www.paypal.com/us/business/paypal-business-fees",
+    "value": "2.99% + $0.49 fixed fee (USD)",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Commission on sales of $15 or more",
+    "last_checked": "2026-10-31",
+    "platform": "Poshmark",
+    "source_url": "https://support.poshmark.com/s/topic/0TO1I000000kJqqWAE/faqs?language=en_US | https://support.poshmark.com/s/article/297755057",
+    "value": "20% of sale price",
+    "verified": true,
+    "sources_batches": [
+      "batch3",
+      "batch5"
+    ]
+  },
+  {
+    "item": "Commission on sales under $15",
+    "last_checked": "2026-10-31",
+    "platform": "Poshmark",
+    "source_url": "https://support.poshmark.com/s/topic/0TO1I000000kJqqWAE/faqs?language=en_US | https://support.poshmark.com/s/article/297755057",
+    "value": "$2.95 flat per sale",
+    "verified": true,
+    "sources_batches": [
+      "batch3",
+      "batch5"
+    ]
+  },
+  {
+    "item": "Listing fee / monthly seller fee",
+    "last_checked": "2026-10-31",
+    "platform": "Poshmark",
+    "source_url": "https://support.poshmark.com/s/topic/0TO1I000000kJqqWAE/faqs?language=en_US",
+    "value": "None",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Offer to Likers minimum discount",
+    "last_checked": "2026-10-31",
+    "note": "Widely reported Poshmark rule; not confirmed on an official Poshmark page in this check. Page tells sellers to confirm in the app.",
+    "platform": "Poshmark",
+    "source_url": "https://poshmark.resellermath.com/",
+    "value": "At least 10% below listing price plus discounted shipping",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "platform": "Poshmark",
+    "item": "Seller fee — sales $15 or more",
+    "value": "20% of sale price",
+    "source_url": "https://support.poshmark.com/s/topic/0TO1I000000kJqqWAE/faqs?language=en_US",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "platform": "Poshmark",
+    "item": "Seller fee — sales under $15",
+    "value": "$2.95 flat",
+    "source_url": "https://support.poshmark.com/s/topic/0TO1I000000kJqqWAE/faqs?language=en_US",
+    "last_checked": "2026-10-31",
+    "verified": true,
+    "sources_batches": [
+      "batch1"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor, UPS Daily / FedEx / USPS",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source summarising carrier documents (FedEx Service Guide, UPS Rate Guide, USPS DMM); not fetched from a carrier page directly. Guide states rates are user-entered and the divisor should be confirmed with the carrier.",
+    "platform": "Shipping",
+    "source_url": "https://www.boxvolumecalculator.com/blog/dimensional-weight-explained.html",
+    "value": "139 cubic inches per pound; USPS only above 1 cubic foot, since 12 July 2026",
+    "verified": false,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor, UPS Retail Rates",
+    "last_checked": "2026-10-31",
+    "note": "Secondary source summarising UPS Rate Guide; same caveat as above.",
+    "platform": "Shipping",
+    "source_url": "https://www.boxvolumecalculator.com/blog/dimensional-weight-explained.html",
+    "value": "166 cubic inches per pound",
+    "verified": false,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Advanced online card rate / third-party fee",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm on shopify.com/pricing.",
+    "platform": "Shopify",
+    "source_url": "https://getkanal.com/blog/shopify-pricing",
+    "value": "2.5% + $0.30 / 0.6%",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Advanced plan subscription (US)",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm on shopify.com/pricing.",
+    "platform": "Shopify",
+    "source_url": "https://getkanal.com/blog/shopify-pricing",
+    "value": "$399/month paid monthly, $359/month paid yearly",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Basic online standard card rate with Shopify Payments (US)",
+    "last_checked": "2026-10-31",
+    "platform": "Shopify",
+    "source_url": "https://www.shopify.com/pricing",
+    "value": "2.9% + $0.30 per transaction",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Basic plan subscription (US)",
+    "last_checked": "2026-10-31",
+    "platform": "Shopify",
+    "source_url": "https://www.shopify.com/pricing",
+    "value": "$39/month paid monthly, $29/month paid yearly",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Basic third-party transaction fee",
+    "last_checked": "2026-10-31",
+    "platform": "Shopify",
+    "source_url": "https://www.shopify.com/pricing",
+    "value": "2%",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Grow online card rate / third-party fee",
+    "last_checked": "2026-10-31",
+    "note": "As above; confirm on shopify.com/pricing.",
+    "platform": "Shopify",
+    "source_url": "https://getkanal.com/blog/shopify-pricing",
+    "value": "2.7% + $0.30 / 1%",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Grow plan subscription (US)",
+    "last_checked": "2026-10-31",
+    "note": "Published rate from an October 2026 read of Shopify's official US pricing page; page text fetched showed Basic only. Confirm on shopify.com/pricing.",
+    "platform": "Shopify",
+    "source_url": "https://getkanal.com/blog/shopify-pricing",
+    "value": "$105/month paid monthly, $89/month paid yearly",
+    "verified": false,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Currency conversion surcharge",
+    "last_checked": "2026-10-31",
+    "platform": "Stripe",
+    "source_url": "https://stripe.com/pricing",
+    "value": "+1%",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "In-person Terminal card payment — US domestic",
+    "last_checked": "2026-10-31",
+    "platform": "Stripe",
+    "source_url": "https://stripe.com/pricing",
+    "value": "2.7% + $0.05",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "International card surcharge",
+    "last_checked": "2026-10-31",
+    "platform": "Stripe",
+    "source_url": "https://stripe.com/pricing",
+    "value": "+1.5%",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Standard online card payment — US domestic",
+    "last_checked": "2026-10-31",
+    "platform": "Stripe",
+    "source_url": "https://stripe.com/pricing",
+    "value": "2.9% + $0.30 per successful transaction",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor — Daily Rates (inches/pounds)",
+    "last_checked": "2026-10-31",
+    "platform": "UPS",
+    "source_url": "https://www.ups.com/us/en/support/shipping-support/shipping-dimensions-weight",
+    "value": "139",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor — Retail Rates (inches/pounds)",
+    "last_checked": "2026-10-31",
+    "platform": "UPS",
+    "source_url": "https://www.ups.com/us/en/support/shipping-support/shipping-dimensions-weight",
+    "value": "166",
+    "verified": true,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Dimensional weight divisor — parcels over 1 cubic foot (inches/pounds)",
+    "last_checked": "2026-10-31",
+    "platform": "USPS",
+    "source_url": "https://www.ups.com/us/en/support/shipping-support/shipping-dimensions-weight",
+    "value": "139 (effective July 12, 2026; applies only above 1,728 cubic inches)",
+    "verified": false,
+    "sources_batches": [
+      "batch4"
+    ]
+  },
+  {
+    "item": "Monthly/setup fee",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "None; referral fee only when an item sells",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Apparel & Accessories",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "5% up to $15, 10% $15-$20, 15% above $20",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Baby Products / Beauty Health & Personal Care",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "8% up to $10, 15% above $10",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Consumer Electronics / Camera & Photo",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "8%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Grocery",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "8% up to $15, 15% above $15",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Jewelry & Precious Metals",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "20% on portion up to $250, 5% above $250",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, most categories / Everything Else",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "15% of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Personal Computers",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "6%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Referral fee, Watches",
+    "last_checked": "2026-10-31",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "15% up to $1,500, 3% above $1,500",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Monthly / setup fee",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "None",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, Apparel & Accessories (tiered)",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "5% up to $15, 10% from $15 to $20, 15% above $20 of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, Consumer Electronics",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "8% of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, Jewelry (tiered)",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "20% on first $250, 5% above $250 of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, most categories / Everything Else",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "15% of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Referral fee, Personal Computers",
+    "last_checked": "2026-10-31",
+    "note": "Official Walmart Marketplace Learn referral fee schedule (last updated March 9, 2026); confirm your contract category rate in Seller Center.",
+    "platform": "Walmart",
+    "source_url": "https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories",
+    "value": "6% of total sales price",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Commission (standard tier, most categories)",
+    "last_checked": "2026-10-31",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "8% of item price, starting rate, falling with four-week sales volume to as low as 3%",
+    "verified": true,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Commission on portion of item price above $1,500 in eligible categories",
+    "last_checked": "2026-10-31",
+    "note": "Reported by seller guides quoting Whatnot's fee schedule; page tells sellers to confirm whether the promotion is still live before modelling high-value sales.",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "0% (limited-time promotion)",
+    "verified": false,
+    "sources_batches": [
+      "batch5"
+    ]
+  },
+  {
+    "item": "Commission volume tiers",
+    "last_checked": "2026-10-31",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "7.75% at $15K, 7.50% at $35K, 7.25% at $50K, 7.00% at $100K, 6.75% at $250K, 6.50% at $500K in 4-week sales; custom rates as low as 3%",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Commission, Coins & Money",
+    "last_checked": "2026-10-31",
+    "note": "Not stated on the official Whatnot fees page fetched 2026-10-31, which says only that rates vary by category; 4% for Coins is reported by secondary sources only. Pages in this batch do not present the 4% coins rate as fact.",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "4% of item final sale price (starting rate)",
+    "verified": true,
+    "notes": "[verified by batch3; earlier batch flagged unverified]",
+    "sources_batches": [
+      "batch2",
+      "batch3"
+    ]
+  },
+  {
+    "item": "Commission, standard (most categories)",
+    "last_checked": "2026-10-31",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "8% of item final sale price, lower at higher four-week sales tiers, as low as 3%",
+    "verified": true,
+    "sources_batches": [
+      "batch3"
+    ]
+  },
+  {
+    "item": "Commission, standard rate",
+    "last_checked": "2026-10-31",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "8% of item final sale price only (shipping and taxes excluded)",
+    "verified": true,
+    "sources_batches": [
+      "batch2"
+    ]
+  },
+  {
+    "item": "Payment processing fee",
+    "last_checked": "2026-10-31",
+    "platform": "Whatnot",
+    "source_url": "https://www.whatnot.com/seller/fees",
+    "value": "2.9% of total order value + $0.30 per order",
+    "verified": true,
+    "sources_batches": [
+      "batch2",
+      "batch3",
+      "batch5"
+    ]
+  },
+  {
+    "item": "Stripe refund rule — original processing fees not returned",
+    "platform": "Dropshipping",
+    "source_url": "https://docs.stripe.com/refunds",
+    "value": "On standard pricing, Stripe's processing fees from the original transaction are not returned when a payment is refunded",
+    "verified": true,
+    "last_checked": "2026-10-31",
+    "note": "Sighted in Stripe's official refund documentation via search result; used as a stated rule (not a numeric rate) on the refund-impact page. Other processors may differ."
+  },
+  {
+    "item": "PayPal currency conversion spread (consumer fee table, other cases)",
+    "platform": "Dropshipping",
+    "source_url": "https://www.paypal.com/ie/digital-wallet/paypal-consumer-fees",
+    "value": "3.00% above the base exchange rate",
+    "verified": true,
+    "last_checked": "2026-10-31",
+    "note": "PayPal's published consumer fee table; US merchant pages list 4.00% for paying for goods/services in another currency. Page presents conversion fee as a user input and cites both, with a check-your-provider caveat."
+  },
+  {
+    "item": "Stripe currency conversion surcharge (US standard pricing)",
+    "platform": "Dropshipping",
+    "source_url": "https://confettisaas.com/blog/how-stripe-fees-work",
+    "value": "1% when currency conversion is required, on top of 2.9% + $0.30 US online card rate",
+    "verified": false,
+    "last_checked": "2026-10-31",
+    "note": "Third-party summary of Stripe's US pricing page (1% currency conversion, 2.9% + $0.30); the official pricing page was not directly sighted in this session, so it is NOT asserted as fact on any page and is not used as a calculator default."
+  },
+  {
+    "item": "Shopify Basic plan price",
+    "platform": "Dropshipping",
+    "source_url": "https://www.lilachbullock.com/shopify-fees/",
+    "value": "$39/month billed monthly, $29/month billed annually (US, as reported October 2026)",
+    "verified": false,
+    "last_checked": "2026-10-31",
+    "note": "Third-party summary citing Shopify's pricing page; the official pricing page was not directly sighted in this session, so it is NOT asserted as fact on any page. The subscription calculator takes the plan price as a user input; its $39 default is an example input only."
+  },
+  {
+    "item": "Dropshipping platform fee (general)",
+    "platform": "Dropshipping",
+    "source_url": "",
+    "value": "NOT HARD-CODED — no single fixed platform fee exists for dropshipping; all calculators take supplier, shipping, payment and subscription costs as user inputs",
+    "verified": false,
+    "last_checked": "2026-10-31",
+    "note": "Deliberate design: dropshipping costs vary by supplier and provider, so pages state this explicitly rather than inventing a fee.",
+    "source_note": "Example default input, not a platform rate — no source URL exists for this value."
+  },
+  {
+    "item": "Etsy listing fee",
+    "last_checked": "2026-10-31",
+    "note": "Matches the already-verified Etsy entry used on etsy-fee-calculator.html; corroborated by web search 2026-10-31 against Etsy's published fees.",
+    "platform": "Etsy",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "$0.20 per listing",
+    "verified": true
+  },
+  {
+    "item": "Etsy transaction fee",
+    "last_checked": "2026-10-31",
+    "note": "US rate as used on etsy-fee-calculator.html. On handmade-etsy-pricing-calculator.html the price is treated as item plus shipping charged combined, and postage cost goes in overhead.",
+    "platform": "Etsy",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "6.5% of item price plus shipping and gift wrap charged",
+    "verified": true
+  },
+  {
+    "item": "Etsy payment processing fee (US)",
+    "last_checked": "2026-10-31",
+    "note": "US payment-account rate only; Etsy states the processing rate varies by country, so non-US sellers should use their own rate. Page states this caveat.",
+    "platform": "Etsy",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": "3% + $0.25 per order",
+    "verified": true
+  },
+  {
+    "item": "Etsy Offsite Ads fee (shop under $10,000 in past 365 days)",
+    "last_checked": "2026-10-31",
+    "note": "Applies only to sales attributed to an Etsy ad shown on another site within 30 days; shops under $10,000 may opt out.",
+    "platform": "Etsy",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "15% of order total, capped at $100 per order",
+    "verified": true
+  },
+  {
+    "item": "Etsy Offsite Ads fee (shop at $10,000 or more in past 365 days)",
+    "last_checked": "2026-10-31",
+    "note": "Applies only to attributed Offsite Ads sales; shops at or above $10,000 cannot opt out.",
+    "platform": "Etsy",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "12% of order total, capped at $100 per order",
+    "verified": true
+  },
+  {
+    "item": "Etsy Offsite Ads fee cap",
+    "last_checked": "2026-10-31",
+    "note": "Cap noted on-page: on very high prices the solved price on handmade-etsy-pricing-calculator.html is approximate and the capped fee should be checked separately.",
+    "platform": "Etsy",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "$100 per order",
+    "verified": true
+  },
+  {
+    "item": "Printful Gildan 5000 tee base cost (one print, smallest sizes)",
+    "last_checked": "2026-10-31",
+    "note": "Printful's own blog figure for 2026; used as the default base cost on the POD profit, design-cost, shipping-profit, Etsy-POD and return-rate pages. Replace with your own blank/provider figure if different.",
+    "platform": "Print on Demand",
+    "source_url": "https://www.printful.com/blog/how-much-money-can-custom-t-shirts-make",
+    "value": 9.25,
+    "verified": true
+  },
+  {
+    "item": "Printful US shirt shipping, starting rate (first item)",
+    "last_checked": "2026-10-31",
+    "note": "Printful's published starting US shipping figure for shirts; also confirmed by Printful's help example (one t-shirt to the USA costs $4.75). Third-party roundups report other figures ($4.69/$4.95) for other categories or dates, so the official $4.75 starting figure is used and pages tell users to check their own product category.",
+    "platform": "Print on Demand",
+    "source_url": "https://www.printful.com/blog/how-much-money-can-custom-t-shirts-make",
+    "value": 4.75,
+    "verified": true
+  },
+  {
+    "item": "Printful shipping rates vary by product category and destination region",
+    "last_checked": "2026-10-31",
+    "note": "Structural fact from Printful's official shipping page, not a single rate. This is why the shipping-profit page takes international shipping as a user input.",
+    "platform": "Print on Demand",
+    "source_url": "https://www.printful.com/shipping",
+    "value": "varies by category and region",
+    "verified": true
+  },
+  {
+    "item": "Printify example t-shirt production cost (Free plan)",
+    "last_checked": "2026-10-31",
+    "note": "Printify's own help-article example (Premium $9.60 in the same example). Used as the default base cost on the POD pricing page; the article itself says exact costs vary by Print Provider.",
+    "platform": "Print on Demand",
+    "source_url": "https://help.printify.com/hc/en-us/articles/4483609656721-How-much-will-I-make-per-sale",
+    "value": 12.0,
+    "verified": true
+  },
+  {
+    "item": "Printify recommended minimum profit margin",
+    "last_checked": "2026-10-31",
+    "note": "Printify recommends keeping at least a 40% profit margin. Used as the default target margin on the POD pricing page.",
+    "platform": "Print on Demand",
+    "source_url": "https://help.printify.com/hc/en-us/articles/4483609656721-How-much-will-I-make-per-sale",
+    "value": "40%",
+    "verified": true
+  },
+  {
+    "item": "Printify Gildan 5000 Heavy Cotton Tee price",
+    "last_checked": "2026-10-31",
+    "note": "Printify's own catalog page price (Premium $6.20 in the same listing). Used as the default unit base cost on the POD bulk-order page.",
+    "platform": "Print on Demand",
+    "source_url": "https://printify.com/make-your-own-shirt/",
+    "value": 8.39,
+    "verified": true
+  },
+  {
+    "item": "Printify bulk order discounts (20+ similar items, same Print Provider)",
+    "last_checked": "2026-10-31",
+    "note": "Shipping discount at 20+ eligible items; product discounts 5% to 46%, typically starting at 51+ units, varying by product and provider. The bulk calculator takes both discount percentages as user inputs rather than hard-coding them.",
+    "platform": "Print on Demand",
+    "source_url": "https://help.printify.com/hc/en-us/articles/4483626103697-Does-Printify-offer-discounts-for-bulk-orders",
+    "value": "up to 46% off products, up to 50% off shipping",
+    "verified": true
+  },
+  {
+    "item": "Etsy listing fee",
+    "last_checked": "2026-10-31",
+    "note": "Per listing/renewal/sale, as used on the POD Etsy profit page. Same rate already used by the existing Etsy fee calculator.",
+    "platform": "Print on Demand",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": 0.2,
+    "verified": true
+  },
+  {
+    "item": "Etsy transaction fee",
+    "last_checked": "2026-10-31",
+    "note": "Applied to order total (price plus shipping charged) on the POD Etsy profit page.",
+    "platform": "Print on Demand",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "6.5% of item price + shipping charged",
+    "verified": true
+  },
+  {
+    "item": "Etsy payment processing fee (US)",
+    "last_checked": "2026-10-31",
+    "note": "US rate; Etsy states the processing rate varies by country, and the page tells non-US sellers to use their own rate.",
+    "platform": "Print on Demand",
+    "source_url": "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "value": "3% + $0.25",
+    "verified": true
+  },
+  {
+    "item": "Etsy Offsite Ads fee",
+    "last_checked": "2026-10-31",
+    "note": "Ad-attributed orders only; $0 on an ordinary sale, as modelled by the Offsite Ads selector on the POD Etsy profit page.",
+    "platform": "Print on Demand",
+    "source_url": "https://www.etsy.com/sg-en/legal/fees/",
+    "value": "15% under $10,000 in past 365 days, 12% at or above, capped at $100 per order",
+    "verified": true
+  },
+  {
+    "item": "International fulfillment shipping default on POD shipping-profit page",
+    "last_checked": "2026-10-31",
+    "note": "EXAMPLE PLACEHOLDER ONLY, not a quoted rate for any product. The page states this explicitly next to the worked example and tells users to replace it with their provider's rate for their product category, because Printful's international rates vary by category and region and third-party roundups conflict.",
+    "platform": "Print on Demand",
+    "source_url": "",
+    "value": 12.49,
+    "verified": false,
+    "source_note": "Example default input, not a platform rate — no source URL exists for this value."
+  },
+  {
+    "item": "Fulfillment shipping default on POD pricing page ($3.00) and bulk page ($5.00)",
+    "last_checked": "2026-10-31",
+    "note": "Plain calculator defaults, not asserted provider figures. Both pages describe them as inputs the user replaces with their own provider's rate.",
+    "platform": "Print on Demand",
+    "source_url": "",
+    "value": "user input / example",
+    "verified": false,
+    "source_note": "Example default input, not a platform rate — no source URL exists for this value."
+  },
+  {
+    "item": "Design cost example ($150) and return-rate example (10%)",
+    "last_checked": "2026-10-31",
+    "note": "Worked-example inputs only, labelled as such on their pages. They are not provider or industry figures.",
+    "platform": "Print on Demand",
+    "source_url": "",
+    "value": "user input / example",
+    "verified": false,
+    "source_note": "Example default input, not a platform rate — no source URL exists for this value."
+  },
+  {
+    "item": "TikTok Shop US referral fee, most categories",
+    "last_checked": "2026-10-31",
+    "note": "Not sighted directly on an official TikTok page (Seller Center pages are login-walled). Multiple independent guides checked against TikTok Shop Seller University in October 2026 list 6% for most categories, but some trade reports claim an increase to around 8% for most non-food categories in August 2026. All 7 pages therefore use an editable referral-rate field defaulting to 6% with an on-page caveat to confirm the rate in Seller Center.",
+    "platform": "TikTok Shop",
+    "source_url": "https://storehero.ai/tiktok-shop-fees/",
+    "value": "6%",
+    "verified": false
+  },
+  {
+    "item": "TikTok Shop US referral fee, some jewelry and pre-owned categories",
+    "last_checked": "2026-10-31",
+    "note": "Same verification status as the 6% rate above; reported by guides summarising TikTok Shop Seller University material, not sighted directly on an official page. Covered by the editable rate field on every fee-bearing page.",
+    "platform": "TikTok Shop",
+    "source_url": "https://storehero.ai/tiktok-shop-fees/",
+    "value": "5%",
+    "verified": false
+  },
+  {
+    "item": "TikTok Shop US refund administration fee on refunded orders",
+    "last_checked": "2026-10-31",
+    "note": "Consistently reported across independent guides citing TikTok Shop Seller Academy (effective May 15, 2025, cap added), but not sighted directly on an official page. Mentioned only in FAQs as a reported figure, never as a calculator hard-code.",
+    "platform": "TikTok Shop",
+    "source_url": "https://www.printful.com/blog/tiktok-shop-fees",
+    "value": "20% of original referral fee, capped at $5 per SKU",
+    "verified": false
+  },
+  {
+    "item": "TikTok Shop affiliate commission rate (seller-set)",
+    "last_checked": "2026-10-31",
+    "note": "Not a TikTok fee: the rate is set by the seller per product. Range and benchmarks come from secondary research citing TikTok help pages. All calculators take the rate as user input, so no unverified rate is hard-coded as fact.",
+    "platform": "TikTok Shop",
+    "source_url": "https://medialabs-co.com/blog/tiktok-shop-affiliate-commission-rates",
+    "value": "1% to 80% seller-set; typical open-collaboration benchmarks 10% to 20%",
+    "verified": false
+  },
+  {
+    "item": "TikTok Shop Co-Funded Free Shipping (CFFS) program end date",
+    "last_checked": "2026-10-31",
+    "note": "Sighted directly on the official TikTok Shop Seller University Free Shipping FAQ Guide (dated May 13, 2026, applies to United States).",
+    "platform": "TikTok Shop",
+    "source_url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4442975095555886",
+    "value": "Ended May 29, 2025",
+    "verified": true
+  },
+  {
+    "item": "Former TikTok Shop shipping subsidy, TikTok Shipping / Seller Shipping",
+    "last_checked": "2026-10-31",
+    "note": "Sighted directly on the official FAQ above. Pages state this subsidy ended and do not use it as a current figure.",
+    "platform": "TikTok Shop",
+    "source_url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4442975095555886",
+    "value": "$0.80 per order, discontinued May 29, 2025",
+    "verified": true
+  },
+  {
+    "item": "Former TikTok Shop shipping subsidy, Fulfilled by TikTok (FBT)",
+    "last_checked": "2026-10-31",
+    "note": "Sighted directly on the official FAQ above. Pages state this subsidy ended and do not use it as a current figure.",
+    "platform": "TikTok Shop",
+    "source_url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4442975095555886",
+    "value": "$0.75 per item, discontinued May 29, 2025",
+    "verified": true
+  },
+  {
+    "item": "TikTok Shop shop-level free shipping threshold for program benefits",
+    "last_checked": "2026-10-31",
+    "note": "Sighted directly on the official FAQ above: sellers offering shop-level free shipping with a threshold of $30 or less unlock added exposure and campaign benefits; benefit is visibility, not a per-order payment.",
+    "platform": "TikTok Shop",
+    "source_url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4442975095555886",
+    "value": "$30 or less",
+    "verified": true
+  },
+  {
+    "item": "Current TikTok Shop shipping subsidy used as calculator default",
+    "last_checked": "2026-10-31",
+    "note": "Modelling default, not a published rate: because the official FAQ confirms the co-funded subsidies ended, the shipping-subsidy and live-profit calculators default the subsidy input to $0 and let the seller enter any current arrangement confirmed in Seller Center.",
+    "platform": "TikTok Shop",
+    "source_url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4442975095555886",
+    "value": "$0 per order",
+    "verified": true
+  },
+  {
+    "item": "Faire marketplace commission",
+    "last_checked": "2026-10-31",
+    "note": "Applies to marketplace orders including reorders from marketplace-discovered retailers; 0% on Faire Direct orders. An older 25% opening-order rate was superseded by Faire's July 2023 North America pricing update (25% lowered to 15% plus the $10 fee).",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "15% of order subtotal on marketplace orders",
+    "verified": true
+  },
+  {
+    "item": "Faire new-customer fee",
+    "last_checked": "2026-10-31",
+    "note": "One-time per new retailer; does not apply to reorders or Faire Direct orders.",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "$10 on a new retailer's opening marketplace order only",
+    "verified": true
+  },
+  {
+    "item": "Faire payment processing fee - next-day payout",
+    "last_checked": "2026-10-31",
+    "note": "Processing rate depends on selected payout speed.",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "3.5% + $0.30 per order",
+    "verified": true
+  },
+  {
+    "item": "Faire payment processing fee - 30-day payout",
+    "last_checked": "2026-10-31",
+    "note": "Default payout option in the Faire calculator's worked example.",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "2.4% + $0.30 per order",
+    "verified": true
+  },
+  {
+    "item": "Faire payment processing fee - 60-day payout",
+    "last_checked": "2026-10-31",
+    "note": "Slowest payout, lowest processing rate.",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "1.9% + $0.30 per order",
+    "verified": true
+  },
+  {
+    "item": "Faire Direct commission",
+    "last_checked": "2026-10-31",
+    "note": "Applies to orders from retailers the brand brings via its Faire Direct link; payment processing still applies.",
+    "platform": "Faire",
+    "source_url": "https://www.faire.com/en-gb/brands",
+    "value": "0% commission",
+    "verified": true
+  }
+]

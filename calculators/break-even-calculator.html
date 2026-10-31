@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Break-Even Calculator - SellerCalc</title>
+<meta name="description" content="Find how many units you must sell to cover your fixed costs, and the sales revenue at that point, from your price and cost per unit.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/break-even-calculator.html">
+<meta property="og:title" content="Break-Even Calculator - SellerCalc">
+<meta property="og:description" content="Find how many units you must sell to cover your fixed costs, and the sales revenue at that point, from your price and cost per unit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/break-even-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Break-Even Calculator",
+"description": "Find how many units you must sell to cover your fixed costs, and the sales revenue at that point, from your price and cost per unit.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What counts as a fixed cost?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Costs that stay the same whether you sell 10 units or 100 in the period: a store subscription, a software plan, or rent for a workspace. Costs that grow with each sale are variable costs, not fixed ones."
+}
+},
+{
+"@type": "Question",
+"name": "What counts as a variable cost?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Everything one more sale adds: the product itself, marketplace and payment fees on that sale, shipping and packaging for that order."
+}
+},
+{
+"@type": "Question",
+"name": "Why is break-even rounded up?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Because you cannot sell a fraction of a unit. If the division gives 100.2 units, you need 101 whole sales to actually cover the fixed costs."
+}
+},
+{
+"@type": "Question",
+"name": "What if my price is below my variable cost?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Then every sale loses money and there is no break-even point at any volume. The price must rise above the variable cost before volume can help."
+}
+},
+{
+"@type": "Question",
+"name": "How do I use break-even for a new product?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Compare it with realistic sales: if break-even is 100 units and you expect 40, either the price, the costs or the product need to change before you commit stock money."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Break-Even Calculator",
+"item": "https://seller-calc-pro.com/calculators/break-even-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Profit</p>
+<h1>Break-Even Calculator</h1>
+<p class="mut">Find how many units you must sell to cover your fixed costs, and the sales revenue at that point, from your price and cost per unit.</p>
+<div class="card">
+<label>Fixed costs ($) <input id="fixed" type="number" value="1000" min="0" step="0.01"></label><br><label>Selling price per unit ($) <input id="price" type="number" value="25" min="0" step="0.01"></label><br><label>Variable cost per unit ($) <input id="var" type="number" value="15" min="0" step="0.01"></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The break-even point is where total revenue exactly covers total costs — every unit after it adds profit, and every unit short of it leaves a loss. It is a planning number, not a forecast: it assumes your price and per-unit cost stay the same for every unit, so re-run it whenever either changes.</p>
+<script>
+function fmt(n){return (n<0?'-$':'$')+Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}function calc(){var f=parseFloat(document.getElementById('fixed').value)||0;var p=parseFloat(document.getElementById('price').value);var v=parseFloat(document.getElementById('var').value)||0;var o=document.getElementById('out');if(isNaN(p)||p<=0||f<0||v<0){o.textContent='Enter a price above $0 and costs of $0 or more.';return;}var contrib=p-v;if(contrib<=0){o.textContent='The price must be above the variable cost per unit — otherwise each sale loses money and there is no break-even point.';return;}var units=Math.ceil(f/contrib);var revenue=Math.round(units*p*100)/100;o.textContent='Contribution per unit: $'+contrib.toFixed(2)+' — Break-even: '+units+' units — Break-even revenue: '+fmt(revenue)+'.';}
+["fixed", "price", "var"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Contribution per unit = selling price − variable cost per unit. Break-even units = fixed costs ÷ contribution per unit, rounded up to the next whole unit. Break-even revenue = break-even units × selling price.</p>
+<h2>How it works</h2><p>Enter your fixed costs for the period — things that do not change with each sale, like a subscription or a batch of packaging. Then enter the selling price and the cost that each extra unit adds, including product, fees and shipping. The calculator divides the fixed costs by what each unit contributes and rounds up, because you cannot sell part of a unit to break even.</p>
+<h2>Worked example</h2><p>Fixed costs of $1,000, a $25 price and a $15 variable cost: each unit contributes $25.00 − $15.00 = $10.00. Break-even units are $1,000 ÷ $10.00 = 100 units, and break-even revenue is 100 × $25.00 = $2,500. Selling 99 units leaves you $10 short; selling 101 units puts you $10 ahead.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>What counts as a fixed cost?</h3><p>Costs that stay the same whether you sell 10 units or 100 in the period: a store subscription, a software plan, or rent for a workspace. Costs that grow with each sale are variable costs, not fixed ones.</p><h3>What counts as a variable cost?</h3><p>Everything one more sale adds: the product itself, marketplace and payment fees on that sale, shipping and packaging for that order.</p><h3>Why is break-even rounded up?</h3><p>Because you cannot sell a fraction of a unit. If the division gives 100.2 units, you need 101 whole sales to actually cover the fixed costs.</p><h3>What if my price is below my variable cost?</h3><p>Then every sale loses money and there is no break-even point at any volume. The price must rise above the variable cost before volume can help.</p><h3>How do I use break-even for a new product?</h3><p>Compare it with realistic sales: if break-even is 100 units and you expect 40, either the price, the costs or the product need to change before you commit stock money.</p>
+</section>
+<p class="mut">Stand: October 2026. Pure arithmetic — no platform rate is used; enter your own figures.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="profit-margin-calculator.html">Profit Margin Calculator</a></p><p><a href="roas-calculator.html">ROAS Calculator</a></p><p><a href="price-to-profit-calculator.html">Price to Profit Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

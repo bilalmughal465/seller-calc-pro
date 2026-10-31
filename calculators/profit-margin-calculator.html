@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profit Margin Calculator - SellerCalc</title>
+<meta name="description" content="Turn a selling price and total cost into profit per unit, profit margin and markup, so you can see whether a price is actually worth listing at.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/profit-margin-calculator.html">
+<meta property="og:title" content="Profit Margin Calculator - SellerCalc">
+<meta property="og:description" content="Turn a selling price and total cost into profit per unit, profit margin and markup, so you can see whether a price is actually worth listing at.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/profit-margin-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Profit Margin Calculator",
+"description": "Turn a selling price and total cost into profit per unit, profit margin and markup, so you can see whether a price is actually worth listing at.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is the difference between margin and markup?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Margin divides profit by the selling price; markup divides profit by the cost. On a $50 price with $30 cost, margin is 40% and markup is 66.7%, even though the profit is $20 in both cases."
+}
+},
+{
+"@type": "Question",
+"name": "What should I include in total cost?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Everything tied to that one unit: product cost, marketplace and payment fees, shipping and packaging, and any per-unit prep or inserts. Leave monthly costs like subscriptions out and spread them separately."
+}
+},
+{
+"@type": "Question",
+"name": "What is a good profit margin for a reseller?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "It depends on the category, return rate and how much time each sale takes. A margin that looks fine before returns, refunds and fees can disappear fast, so judge it after all per-unit costs, not before."
+}
+},
+{
+"@type": "Question",
+"name": "Can margin be negative?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. If total cost is higher than the selling price, profit and margin go negative, which means every sale loses money before monthly costs. Raise the price or cut a cost before listing."
+}
+},
+{
+"@type": "Question",
+"name": "Why does margin matter more than profit dollars?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Because $20 profit on a $50 item and $20 profit on a $200 item are very different businesses. Margin lets you compare products at different prices and spot which one earns its shelf space."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Profit Margin Calculator",
+"item": "https://seller-calc-pro.com/calculators/profit-margin-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Profit</p>
+<h1>Profit Margin Calculator</h1>
+<p class="mut">Turn a selling price and total cost into profit per unit, profit margin and markup, so you can see whether a price is actually worth listing at.</p>
+<div class="card">
+<label>Selling price per unit ($) <input id="price" type="number" value="50" min="0" step="0.01"></label><br><label>Total cost per unit ($) <input id="cost" type="number" value="30" min="0" step="0.01"></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>Profit per unit is the cash left from one sale. Margin tells you what share of the selling price that profit is, which is the number to compare across products at different prices. Markup tells you how much you added on top of cost, which is a different number — a 40% margin is not the same as a 40% markup, and mixing them up is how thin deals get approved.</p>
+<script>
+function calc(){var p=parseFloat(document.getElementById('price').value);var c=parseFloat(document.getElementById('cost').value)||0;var o=document.getElementById('out');if(isNaN(p)||p<=0||c<0){o.textContent='Enter a selling price above $0 and a cost of $0 or more.';return;}var profit=Math.round((p-c)*100)/100;var margin=Math.round(profit/p*1000)/10;var markup=c>0?Math.round(profit/c*1000)/10:0;o.textContent='Profit per unit: $'+profit.toFixed(2)+' — Margin: '+margin.toFixed(1)+'% — Markup on cost: '+markup.toFixed(1)+'%.';}
+["price", "cost"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Profit per unit = selling price − total cost. Profit margin = profit ÷ selling price × 100. Markup = profit ÷ total cost × 100. Total cost should include everything per unit: product, fees, shipping, packaging and any other per-unit cost.</p>
+<h2>How it works</h2><p>Enter what the buyer pays per unit and everything that unit costs you, all in. Marketplace fees belong in the cost figure — run the platform fee calculator first if you have not already. The calculator shows profit, margin and markup together so you can check all three before you commit to a price.</p>
+<h2>Worked example</h2><p>A $50 selling price with a $30 total cost: profit is $50.00 − $30.00 = $20.00. Margin is $20.00 ÷ $50.00 = 40.0%. Markup is $20.00 ÷ $30.00 = 66.7%. The same $20 profit is a 40% margin but a 66.7% markup — the gap between those two numbers is why this page shows both.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>What is the difference between margin and markup?</h3><p>Margin divides profit by the selling price; markup divides profit by the cost. On a $50 price with $30 cost, margin is 40% and markup is 66.7%, even though the profit is $20 in both cases.</p><h3>What should I include in total cost?</h3><p>Everything tied to that one unit: product cost, marketplace and payment fees, shipping and packaging, and any per-unit prep or inserts. Leave monthly costs like subscriptions out and spread them separately.</p><h3>What is a good profit margin for a reseller?</h3><p>It depends on the category, return rate and how much time each sale takes. A margin that looks fine before returns, refunds and fees can disappear fast, so judge it after all per-unit costs, not before.</p><h3>Can margin be negative?</h3><p>Yes. If total cost is higher than the selling price, profit and margin go negative, which means every sale loses money before monthly costs. Raise the price or cut a cost before listing.</p><h3>Why does margin matter more than profit dollars?</h3><p>Because $20 profit on a $50 item and $20 profit on a $200 item are very different businesses. Margin lets you compare products at different prices and spot which one earns its shelf space.</p>
+</section>
+<p class="mut">Stand: October 2026. Pure arithmetic — no platform rate is used; enter your own figures.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="break-even-calculator.html">Break-Even Calculator</a></p><p><a href="price-to-profit-calculator.html">Price to Profit Calculator</a></p><p><a href="discount-profit-calculator.html">Discount Profit Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

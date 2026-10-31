@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seller-calc-pro.com/sitemap.xml

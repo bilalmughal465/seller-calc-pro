@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discount Profit Calculator - SellerCalc</title>
+<meta name="description" content="See what a discount really costs: compare profit at full price with profit at the sale price after fees.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/discount-profit-calculator.html">
+<meta property="og:title" content="Discount Profit Calculator - SellerCalc">
+<meta property="og:description" content="See what a discount really costs: compare profit at full price with profit at the sale price after fees.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/discount-profit-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}a{color:#1D4ED8;text-decoration:underline}.card input,.card select{border:1.5px solid #64748B;border-radius:8px;padding:8px;margin:4px 0}.card button{background:#F97316;color:#0F172A;border:0;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer}.card button:hover{background:#EA580C}.card button:active{background:#C2410C}.result{color:#172554;font-weight:700}label{display:block;margin:8px 0}.cta-btn{background:#F97316!important;color:#0F172A!important;text-decoration:none}.cta-btn:hover{background:#EA580C!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Discount Profit Calculator", "description": "See what a discount really costs: compare profit at full price with profit at the sale price after fees.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web", "url": "https://seller-calc-pro.com/calculators/discount-profit-calculator.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does a 20% discount cost more than 20% of my profit?", "acceptedAnswer": {"@type": "Answer", "text": "Because only the price falls. Your product cost and shipping cost stay the same, so the whole $10 price cut comes out of profit, partly offset by slightly lower fees. On thin margins a small discount can wipe out profit entirely."}}, {"@type": "Question", "name": "Should fees be calculated on the sale price or the original price?", "acceptedAnswer": {"@type": "Answer", "text": "On the sale price \u2014 the amount the buyer actually pays. Marketplaces charge their fee on the completed sale amount, which is the discounted price."}}, {"@type": "Question", "name": "How deep a discount can I afford?", "acceptedAnswer": {"@type": "Answer", "text": "Work backwards: the lowest sale price that still leaves your minimum profit. Enter different discount percentages here until the sale-price profit reaches that floor, and never go below it for a promotion."}}, {"@type": "Question", "name": "Do discounts ever pay for themselves?", "acceptedAnswer": {"@type": "Answer", "text": "Only if the extra volume they create outweighs the profit lost on every sale, including sales you would have made anyway at full price. Compare the total profit, not just the number of orders."}}, {"@type": "Question", "name": "What about a coupon that the marketplace funds?", "acceptedAnswer": {"@type": "Answer", "text": "If the marketplace pays the discount, your sale price for fee purposes may still change. Check how that marketplace treats funded promotions before entering the numbers."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://seller-calc-pro.com/"}, {"@type": "ListItem", "position": 2, "name": "Discount Profit Calculator", "item": "https://seller-calc-pro.com/calculators/discount-profit-calculator.html"}]}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Pricing</p>
+<h1>Discount Profit Calculator</h1>
+<p class="mut">Enter the original price, the discount, your costs and your fees. The calculator shows the sale price, the profit at both prices, and how much profit the discount gives away.</p>
+<div class="card">
+<label>Original price ($) <input id="orig" type="number" value="50" step="0.01" min="0"></label><br>
+<label>Discount (%) <input id="disc" type="number" value="20" step="0.01" min="0"></label><br>
+<label>Product cost ($) <input id="cost" type="number" value="14" step="0.01" min="0"></label><br>
+<label>Shipping cost you pay ($) <input id="ship" type="number" value="5" step="0.01" min="0"></label><br>
+<label>Marketplace fee (%) <input id="mkt" type="number" value="13" step="0.01" min="0"></label><br>
+<label>Payment fee (%) <input id="pay" type="number" value="2.9" step="0.01" min="0"></label><br>
+<label>Payment fixed fee ($) <input id="fixed" type="number" value="0.30" step="0.01" min="0"></label><br>
+<button onclick="calc()">Calculate</button>
+<div class="result" id="out">&mdash;</div>
+</div>
+<p>A discount cuts more than the price: fees fall slightly because they are charged on the lower price, but your product and shipping costs do not fall at all. That is why a 20% discount can remove far more than 20% of your profit.</p>
+<script>
+function money(n){return (n<0?'-$':'$')+Math.abs(n).toFixed(2);}
+function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?NaN:v;}
+function calc(){
+var o=document.getElementById('out');
+var orig=num('orig'),disc=num('disc'),cost=num('cost'),ship=num('ship'),mkt=num('mkt'),pay=num('pay'),fixed=num('fixed');
+ if([orig,disc,cost,ship,mkt,pay,fixed].some(isNaN)){o.textContent='Please enter a number in every field.';return;}
+ if(orig<=0){o.textContent='Original price must be above zero.';return;}
+ if(disc<0||disc>=100){o.textContent='Discount must be between 0 and 100.';return;}
+ if(mkt<0||mkt>=100||pay<0||pay>=100){o.textContent='Fee percentages must be between 0 and 100.';return;}
+ var sale=orig*(1-disc/100);
+ var pf=function(p){return p-cost-ship-p*mkt/100-(p*pay/100+fixed);};
+ var pFull=pf(orig), pSale=pf(sale);
+ o.textContent='Sale price: '+money(sale)+' | Profit at full price: '+money(pFull)+' | Profit at sale price: '+money(pSale)+' | Discount costs: '+money(pFull-pSale)+' of profit.';
+}
+document.getElementById('orig').addEventListener('input',calc);
+document.getElementById('disc').addEventListener('input',calc);
+document.getElementById('cost').addEventListener('input',calc);
+document.getElementById('ship').addEventListener('input',calc);
+document.getElementById('mkt').addEventListener('input',calc);
+document.getElementById('pay').addEventListener('input',calc);
+document.getElementById('fixed').addEventListener('input',calc);
+calc();
+</script>
+<h2>Formula</h2><p>Sale price = original price &times; (1 &minus; discount %). Profit at either price = price &minus; product cost &minus; shipping cost &minus; (price &times; marketplace fee %) &minus; (price &times; payment fee % + fixed fee).</p>
+<h2>How it works</h2><p>Enter the full price and the discount to get the sale price. The calculator works out profit at both prices with the same costs and fees, so the gap between them is exactly what the discount costs you on one sale.</p>
+<h2>Worked example</h2><p>Original price $50.00 with a 20% discount gives a sale price of $40.00. Costs are $14.00 product and $5.00 shipping; fees are 13% marketplace and 2.9% + $0.30 payment. Profit at full price: $50.00 &minus; $14.00 &minus; $5.00 &minus; $6.50 &minus; $1.75 = $22.75. Profit at sale price: $40.00 &minus; $14.00 &minus; $5.00 &minus; $5.20 &minus; $1.46 = $14.34. The discount costs $22.75 &minus; $14.34 = $8.41 of profit per sale.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>Why does a 20% discount cost more than 20% of my profit?</h3><p>Because only the price falls. Your product cost and shipping cost stay the same, so the whole $10 price cut comes out of profit, partly offset by slightly lower fees. On thin margins a small discount can wipe out profit entirely.</p>
+<h3>Should fees be calculated on the sale price or the original price?</h3><p>On the sale price — the amount the buyer actually pays. Marketplaces charge their fee on the completed sale amount, which is the discounted price.</p>
+<h3>How deep a discount can I afford?</h3><p>Work backwards: the lowest sale price that still leaves your minimum profit. Enter different discount percentages here until the sale-price profit reaches that floor, and never go below it for a promotion.</p>
+<h3>Do discounts ever pay for themselves?</h3><p>Only if the extra volume they create outweighs the profit lost on every sale, including sales you would have made anyway at full price. Compare the total profit, not just the number of orders.</p>
+<h3>What about a coupon that the marketplace funds?</h3><p>If the marketplace pays the discount, your sale price for fee purposes may still change. Check how that marketplace treats funded promotions before entering the numbers.</p>
+</section>
+<p class="mut">Stand: October 2026. Pure arithmetic — no platform rate is used; enter your own figures.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Your actual fees, shipping costs and profit depend on your marketplace account, category, shipping service and buyer location. Check the figures that apply to you before pricing a listing.</p>
+<h2>Related calculators</h2>
+<p><a href="price-to-profit-calculator.html">Price to Profit Calculator</a></p>
+<p><a href="bundle-profit-calculator.html">Bundle Profit Calculator</a></p>
+<p><a href="listing-price-calculator.html">Listing Price Calculator</a></p>
+
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Start with a free calculator</h2><p>Search, pick a calculator, and get an instant result. No sign-up, no download.</p><p><a class="cta-btn" href="../index.html"><span class="mix">Browse calculators</span></a></p><p><a href="../about.html">About SellerCalc</a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc &mdash; Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

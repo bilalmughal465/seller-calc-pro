@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SellerCalc — Free Seller Fee & Profit Calculators</title>
+<meta name="description" content="Free fee, profit and shipping calculators for US sellers on Etsy, eBay, Amazon, Poshmark, Mercari, Whatnot, Walmart and Shopify. Results are estimates only.">
+<link rel="canonical" href="https://seller-calc-pro.com/">
+<meta property="og:title" content="SellerCalc — Free Fee, Profit and Shipping Calculators for US Sellers">
+<meta property="og:description" content="Free fee, profit and shipping calculators and guides for US sellers on Etsy, eBay, Amazon, Poshmark, Mercari, Whatnot, Walmart and Shopify. Results are estimates only.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}a{color:#1D4ED8;text-decoration:underline}input,select,textarea{border:1px solid #64748B}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SellerCalc","url":"https://seller-calc-pro.com/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is SellerCalc?", "acceptedAnswer": {"@type": "Answer", "text": "SellerCalc is a free website with fee, profit and shipping calculators and guides for US online sellers on Amazon, Etsy, eBay, Walmart, Shopify, Whatnot, Poshmark and Mercari."}}, {"@type": "Question", "name": "Are SellerCalc calculators free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, all SellerCalc calculators are free to use, with no sign-up and no download."}}, {"@type": "Question", "name": "Do I need to sign up to use a calculator?", "acceptedAnswer": {"@type": "Answer", "text": "No, you do not need to sign up. Open a calculator, enter your numbers, and get an instant result."}}, {"@type": "Question", "name": "Are the results exact?", "acceptedAnswer": {"@type": "Answer", "text": "No. Results are estimates and general information only, based on the numbers you enter and the fee rates shown on the page. Always check the platform's current fee page before you price or buy."}}]}</script>
+<style>.mini-sci{background:#172554;border:1px solid #3B82F6;border-radius:16px;padding:12px}.mini-sci-head{display:flex;justify-content:space-between;align-items:center;color:#FFFFFF;font-weight:700;font-size:14px;margin-bottom:8px}.mini-sci .deg-btn{margin:0!important;background:#1D4ED8!important;color:#fff!important;border:1px solid #3B82F6!important;border-radius:8px!important;padding:4px 10px!important;font-size:12px!important;cursor:pointer}.mini-display{background:rgba(255,255,255,.12);border-radius:10px;padding:8px 10px;text-align:right;margin-bottom:10px;min-height:54px}.mini-display .expr{color:#DBEAFE;font-size:13px;min-height:18px;word-break:break-all}.mini-display .out{color:#fff;font-size:22px;font-weight:700;word-break:break-all}.mini-sci .keys{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.mini-sci .keys button{margin:0!important;border-radius:9px!important;padding:9px 0!important;font:700 14px Sora,sans-serif!important;cursor:pointer;border:1px solid #E2E8F0!important}.mini-sci .k-num{background:#fff!important;color:#0F172A!important}.mini-sci .k-fn{background:#DBEAFE!important;color:#0F172A!important}.mini-sci .k-op{background:#1D4ED8!important;color:#fff!important;border-color:#1D4ED8!important}.mini-sci .k-eq{background:#F97316!important;color:#0F172A!important;border:2px solid #EA580C!important}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:700px){.hero-grid{grid-template-columns:1fr}}</style>
+</head><body>
+<header><div class="wrap nav-classic"><a class="logo" href="index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="index.html"><span class="mix">Home</span></a><a href="index.html#categories"><span class="mix">Calculators</span></a><a href="index.html#guides"><span class="mix">Guides</span></a><a href="about.html"><span class="mix">About</span></a><a href="contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="hero-grid"><div><h1>Seller Tools That Show Your Real Profit</h1><p class="hero-sub">Free fee, profit and shipping calculators for US online sellers. Enter your price, see what the platform takes, and keep what is left — before you list, not after you sell.</p></div><div><div class="mini-sci"><div class="mini-sci-head"><span>Scientific Calculator</span><button class="deg-btn" id="degBtn" type="button">DEG</button></div><div class="mini-display"><div class="expr" id="sciExpr"></div><div class="out" id="sciOut">0</div></div><div class="keys"><button class="k-fn" data-ins="sin(">sin</button><button class="k-fn" data-ins="cos(">cos</button><button class="k-fn" data-ins="tan(">tan</button><button class="k-fn" data-ins="log(">log</button><button class="k-fn" data-ins="ln(">ln</button><button class="k-fn" data-ins="^2">x²</button><button class="k-fn" data-ins="^">xʸ</button><button class="k-fn" data-ins="sqrt(">√</button><button class="k-fn" data-ins="(">(</button><button class="k-fn" data-ins=")">)</button><button class="k-num" data-ins="7">7</button><button class="k-num" data-ins="8">8</button><button class="k-num" data-ins="9">9</button><button class="k-op" data-ins="/">÷</button><button class="k-fn" data-ins="clear">AC</button><button class="k-num" data-ins="4">4</button><button class="k-num" data-ins="5">5</button><button class="k-num" data-ins="6">6</button><button class="k-op" data-ins="*">×</button><button class="k-fn" data-ins="back">⌫</button><button class="k-num" data-ins="1">1</button><button class="k-num" data-ins="2">2</button><button class="k-num" data-ins="3">3</button><button class="k-op" data-ins="-">−</button><button class="k-fn" data-ins="pi">π</button><button class="k-num" data-ins="0">0</button><button class="k-num" data-ins=".">.</button><button class="k-fn" data-ins="neg">±</button><button class="k-op" data-ins="+">+</button><button class="k-eq" data-ins="eq">=</button></div></div></div></div></section><script>(function(){var expr="",deg=true;var eEl=document.getElementById('sciExpr'),oEl=document.getElementById('sciOut'),dBtn=document.getElementById('degBtn');function render(){eEl.textContent=expr;oEl.textContent=expr||"0";}dBtn.addEventListener('click',function(){deg=!deg;dBtn.textContent=deg?"DEG":"RAD";});document.querySelectorAll('.mini-sci .keys button').forEach(function(b){b.addEventListener('click',function(){var ins=b.getAttribute('data-ins');if(ins==="clear"){expr="";render();return;}if(ins==="back"){expr=expr.slice(0,-1);render();return;}if(ins==="neg"){expr=expr.startsWith("-")?expr.slice(1):"-"+expr;render();return;}if(ins==="pi"){expr+="pi";render();return;}if(ins==="eq"){try{var s=expr;if(deg){s=s.replace(/sin\(/g,"Math.sin((Math.PI/180)*").replace(/cos\(/g,"Math.cos((Math.PI/180)*").replace(/tan\(/g,"Math.tan((Math.PI/180)*");}else{s=s.replace(/sin\(/g,"Math.sin(").replace(/cos\(/g,"Math.cos(").replace(/tan\(/g,"Math.tan(");}s=s.replace(/log\(/g,"Math.log10(").replace(/ln\(/g,"Math.log(").replace(/sqrt\(/g,"Math.sqrt(").replace(/\^2/g,"**2").replace(/\^/g,"**").replace(/pi/g,"Math.PI");var v=Function('"use strict";return ('+s+')')();oEl.textContent=String(v);expr=String(v);}catch(err){oEl.textContent="Error";}return;}expr+=ins;render();});});render();})();</script><h2 id="categories">Calculator categories</h2><div class="feat-grid"><div><b><a href="calculators/etsy-fee-calculator.html">Etsy</a></b><p>Listing, transaction and payment fees for Etsy sellers.</p><p><a href="calculators/etsy-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/ebay-final-value-fee-calculator.html">eBay</a></b><p>Final value fees by category, plus profit and store tools.</p><p><a href="calculators/ebay-final-value-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/amazon-fba-profit-calculator.html">Amazon</a></b><p>FBA profit, referral fees and storage estimates.</p><p><a href="calculators/amazon-fba-profit-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/poshmark-fee-calculator.html">Poshmark & Mercari</a></b><p>Simple flat-rate fee calculators for resale sellers.</p><p><a href="calculators/poshmark-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/whatnot-fee-calculator.html">Whatnot</a></b><p>Live-shopping fees and profit estimates.</p><p><a href="calculators/whatnot-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/walmart-marketplace-fee-calculator.html">Walmart & Shopify</a></b><p>Marketplace and store fee estimates.</p><p><a href="calculators/walmart-marketplace-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/shipping-cost-comparison-calculator.html">Shipping</a></b><p>Dimensional weight and shipping cost comparisons.</p><p><a href="calculators/shipping-cost-comparison-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/profit-margin-calculator.html">Profit & Pricing</a></b><p>Margins, break-even, discounts and bundle profit.</p><p><a href="calculators/profit-margin-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/tiktok-shop-fee-calculator.html">TikTok Shop</a></b><p>Referral fees, affiliate commissions and live-shopping profit.</p><p><a href="calculators/tiktok-shop-fee-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/print-on-demand-profit-calculator.html">Print on Demand</a></b><p>Base costs, pricing, shipping and returns for POD sellers.</p><p><a href="calculators/print-on-demand-profit-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/dropshipping-margin-calculator.html">Dropshipping</a></b><p>Margins, ad spend, refunds and supplier comparisons.</p><p><a href="calculators/dropshipping-margin-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/handmade-pricing-calculator.html">Handmade</a></b><p>Material, labor and platform-fee pricing for craft sellers.</p><p><a href="calculators/handmade-pricing-calculator.html">Open calculator &rarr;</a></p></div><div><b><a href="calculators/wholesale-margin-calculator.html">Wholesale</a></b><p>Faire commissions, bulk discounts and retail markups.</p><p><a href="calculators/wholesale-margin-calculator.html">Open calculator &rarr;</a></p></div></div><h2>All calculators</h2>
+<h3>Etsy</h3><ul>
+<li><a href="calculators/etsy-fee-calculator.html">Etsy Fee Calculator</a></li>
+<li><a href="calculators/etsy-profit-margin-calculator.html">Etsy Profit Margin Calculator</a></li>
+<li><a href="calculators/etsy-ads-profit-calculator.html">Etsy Ads Profit Calculator</a></li>
+</ul>
+<h3>eBay</h3><ul>
+<li><a href="calculators/ebay-final-value-fee-calculator.html">eBay Final Value Fee Calculator</a></li>
+<li><a href="calculators/ebay-profit-calculator.html">eBay Profit Calculator</a></li>
+<li><a href="calculators/ebay-store-subscription-calculator.html">eBay Store Subscription Calculator</a></li>
+</ul>
+<h3>Amazon</h3><ul>
+<li><a href="calculators/amazon-fba-profit-calculator.html">Amazon FBA Profit Calculator</a></li>
+<li><a href="calculators/amazon-referral-fee-calculator.html">Amazon Referral Fee Calculator</a></li>
+<li><a href="calculators/fba-storage-fee-calculator.html">FBA Storage Fee Calculator</a></li>
+</ul>
+<h3>Poshmark & Mercari</h3><ul>
+<li><a href="calculators/poshmark-fee-calculator.html">Poshmark Fee Calculator</a></li>
+<li><a href="calculators/poshmark-offer-profit-calculator.html">Poshmark Offer Profit Calculator</a></li>
+<li><a href="calculators/mercari-fee-calculator.html">Mercari Fee Calculator</a></li>
+<li><a href="calculators/mercari-profit-calculator.html">Mercari Profit Calculator</a></li>
+</ul>
+<h3>Whatnot</h3><ul>
+<li><a href="calculators/whatnot-fee-calculator.html">Whatnot Fee Calculator</a></li>
+<li><a href="calculators/whatnot-profit-calculator.html">Whatnot Profit Calculator</a></li>
+</ul>
+<h3>Walmart & Shopify</h3><ul>
+<li><a href="calculators/walmart-marketplace-fee-calculator.html">Walmart Marketplace Fee Calculator</a></li>
+<li><a href="calculators/shopify-fee-calculator.html">Shopify Fee Calculator</a></li>
+</ul>
+<h3>Shipping</h3><ul>
+<li><a href="calculators/shipping-cost-comparison-calculator.html">Shipping Cost Comparison Calculator</a></li>
+<li><a href="calculators/shipping-profit-calculator.html">Shipping Profit Calculator</a></li>
+<li><a href="calculators/dimensional-weight-calculator.html">Dimensional Weight Calculator</a></li>
+<li><a href="calculators/international-shipping-estimator.html">International Shipping Estimator</a></li>
+</ul>
+<h3>Profit & Pricing</h3><ul>
+<li><a href="calculators/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+<li><a href="calculators/break-even-calculator.html">Break-Even Calculator</a></li>
+<li><a href="calculators/roas-calculator.html">ROAS Calculator</a></li>
+<li><a href="calculators/discount-profit-calculator.html">Discount Profit Calculator</a></li>
+<li><a href="calculators/bundle-profit-calculator.html">Bundle Profit Calculator</a></li>
+<li><a href="calculators/bulk-lot-pricing-calculator.html">Bulk Lot Pricing Calculator</a></li>
+<li><a href="calculators/listing-price-calculator.html">Listing Price Calculator</a></li>
+<li><a href="calculators/price-to-profit-calculator.html">Price to Profit Calculator</a></li>
+<li><a href="calculators/return-cost-calculator.html">Return Cost Calculator</a></li>
+<li><a href="calculators/thrift-flip-profit-calculator.html">Thrift Flip Profit Calculator</a></li>
+<li><a href="calculators/seller-fees-comparison-calculator.html">Seller Fees Comparison Calculator</a></li>
+<li><a href="calculators/payment-processing-fee-calculator.html">Payment Processing Fee Calculator</a></li>
+<li><a href="calculators/promoted-listings-fee-calculator.html">Promoted Listings Fee Calculator</a></li>
+</ul>
+<h3>TikTok Shop</h3><ul>
+<li><a href="calculators/tiktok-shop-fee-calculator.html">TikTok Shop Fee Calculator</a></li>
+<li><a href="calculators/tiktok-shop-profit-calculator.html">TikTok Shop Profit Calculator</a></li>
+<li><a href="calculators/tiktok-shop-affiliate-commission-calculator.html">TikTok Shop Affiliate Commission Calculator</a></li>
+<li><a href="calculators/tiktok-shop-break-even-price-calculator.html">TikTok Shop Break-Even Price Calculator</a></li>
+<li><a href="calculators/tiktok-shop-creator-payout-calculator.html">TikTok Shop Creator Payout Calculator</a></li>
+<li><a href="calculators/tiktok-shop-live-profit-calculator.html">TikTok Shop Live Profit Calculator</a></li>
+<li><a href="calculators/tiktok-shop-shipping-subsidy-calculator.html">TikTok Shop Shipping Subsidy Calculator</a></li>
+</ul>
+<h3>Print on Demand</h3><ul>
+<li><a href="calculators/print-on-demand-profit-calculator.html">Print on Demand Profit Calculator</a></li>
+<li><a href="calculators/pod-pricing-calculator.html">POD Pricing Calculator</a></li>
+<li><a href="calculators/pod-bulk-order-calculator.html">POD Bulk Order Calculator</a></li>
+<li><a href="calculators/pod-design-cost-calculator.html">POD Design Cost Calculator</a></li>
+<li><a href="calculators/pod-return-rate-profit-calculator.html">POD Return Rate Profit Calculator</a></li>
+<li><a href="calculators/pod-shipping-profit-calculator.html">POD Shipping Profit Calculator</a></li>
+<li><a href="calculators/pod-etsy-profit-calculator.html">POD Etsy Profit Calculator</a></li>
+</ul>
+<h3>Dropshipping</h3><ul>
+<li><a href="calculators/dropshipping-margin-calculator.html">Dropshipping Margin Calculator</a></li>
+<li><a href="calculators/dropshipping-currency-conversion-calculator.html">Dropshipping Currency Conversion Calculator</a></li>
+<li><a href="calculators/dropshipping-subscription-cost-calculator.html">Dropshipping Subscription Cost Calculator</a></li>
+<li><a href="calculators/dropshipping-refund-impact-calculator.html">Dropshipping Refund Impact Calculator</a></li>
+<li><a href="calculators/dropshipping-ad-spend-calculator.html">Dropshipping Ad Spend Calculator</a></li>
+<li><a href="calculators/dropshipping-break-even-calculator.html">Dropshipping Break-Even Calculator</a></li>
+</ul>
+<h3>Handmade</h3><ul>
+<li><a href="calculators/handmade-pricing-calculator.html">Handmade Pricing Calculator</a></li>
+<li><a href="calculators/handmade-etsy-pricing-calculator.html">Handmade Etsy Pricing Calculator</a></li>
+<li><a href="calculators/handmade-custom-order-calculator.html">Handmade Custom Order Calculator</a></li>
+<li><a href="calculators/handmade-profit-per-hour-calculator.html">Handmade Profit Per Hour Calculator</a></li>
+<li><a href="calculators/handmade-material-cost-calculator.html">Handmade Material Cost Calculator</a></li>
+<li><a href="calculators/craft-labor-cost-calculator.html">Craft Labor Cost Calculator</a></li>
+<li><a href="calculators/craft-market-booth-calculator.html">Craft Market Booth Calculator</a></li>
+</ul>
+<h3>Wholesale</h3><ul>
+<li><a href="calculators/wholesale-margin-calculator.html">Wholesale Margin Calculator</a></li>
+<li><a href="calculators/wholesale-net-terms-calculator.html">Wholesale Net Terms Calculator</a></li>
+<li><a href="calculators/wholesale-freight-cost-calculator.html">Wholesale Freight Cost Calculator</a></li>
+<li><a href="calculators/wholesale-bulk-discount-calculator.html">Wholesale Bulk Discount Calculator</a></li>
+<li><a href="calculators/wholesale-minimum-order-calculator.html">Wholesale Minimum Order Calculator</a></li>
+<li><a href="calculators/wholesale-retail-markup-calculator.html">Wholesale Retail Markup Calculator</a></li>
+<li><a href="calculators/faire-commission-calculator.html">Faire Commission Calculator</a></li>
+<li><a href="calculators/supplier-cost-comparison-calculator.html">Supplier Cost Comparison Calculator</a></li>
+<li><a href="calculators/inventory-reorder-point-calculator.html">Inventory Reorder Point Calculator</a></li>
+</ul>
+<h2>Popular searches</h2><p><a href="calculators/etsy-fee-calculator.html">Etsy fees calculator</a> &middot; <a href="calculators/ebay-final-value-fee-calculator.html">eBay final value fee</a> &middot; <a href="calculators/poshmark-fee-calculator.html">Poshmark fee calculator</a> &middot; <a href="calculators/amazon-fba-profit-calculator.html">Amazon FBA profit calculator</a> &middot; <a href="calculators/dimensional-weight-calculator.html">Dimensional weight calculator</a> &middot; <a href="calculators/mercari-fee-calculator.html">Mercari fee calculator</a> &middot; <a href="calculators/profit-margin-calculator.html">Profit margin calculator</a> &middot; <a href="calculators/shipping-cost-comparison-calculator.html">Shipping cost comparison</a></p><h2 id="guides">Guides</h2><article class="calc-card"><h2><a href="guides/etsy-fees-explained.html">Etsy Fees Explained</a></h2><p>Every Etsy fee on a US sale, with a worked example. <a href="guides/etsy-fees-explained.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/ebay-fees-by-category.html">eBay Fees by Category</a></h2><p>Final value fees by category, with the total-sale trap explained. <a href="guides/ebay-fees-by-category.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/poshmark-fees-explained.html">Poshmark Fees Explained</a></h2><p>The $2.95 and 20% rules, with low-price examples. <a href="guides/poshmark-fees-explained.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/mercari-fees-explained.html">Mercari Fees Explained</a></h2><p>The flat 10% selling fee and what it is charged on. <a href="guides/mercari-fees-explained.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/whatnot-seller-fees.html">Whatnot Seller Fees</a></h2><p>Whatnot fees for live sellers, explained simply. <a href="guides/whatnot-seller-fees.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/how-to-price-for-profit-after-fees.html">How to Price for Profit After Fees</a></h2><p>A step-by-step pricing method that leaves room for fees. <a href="guides/how-to-price-for-profit-after-fees.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/usps-vs-ups-shipping-for-small-sellers.html">USPS vs UPS Shipping for Small Sellers</a></h2><p>How to compare carriers without guessing. <a href="guides/usps-vs-ups-shipping-for-small-sellers.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/break-even-pricing-guide.html">Break-Even Pricing Guide</a></h2><p>Find the price where a sale stops losing money. <a href="guides/break-even-pricing-guide.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/amazon-fba-fees-explained.html">Amazon FBA Fees Explained</a></h2><p>Referral, fulfillment and storage fees in plain language. <a href="guides/amazon-fba-fees-explained.html">Read the guide &rarr;</a></p></article><article class="calc-card"><h2><a href="guides/walmart-marketplace-fees-explained.html">Walmart Marketplace Fees Explained</a></h2><p>Referral fees and selling costs on Walmart Marketplace. <a href="guides/walmart-marketplace-fees-explained.html">Read the guide &rarr;</a></p></article><div class="feat-grid"><div><b>Fast results</b><p>Enter numbers and get an instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each calculator page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div><h2>Frequently asked questions</h2><section class="faq"><h3>What is SellerCalc?</h3><p>SellerCalc is a free website with fee, profit and shipping calculators and guides for US online sellers on Amazon, Etsy, eBay, Walmart, Shopify, Whatnot, Poshmark and Mercari.</p><h3>Are SellerCalc calculators free?</h3><p>Yes, all SellerCalc calculators are free to use, with no sign-up and no download.</p><h3>Do I need to sign up to use a calculator?</h3><p>No, you do not need to sign up. Open a calculator, enter your numbers, and get an instant result.</p><h3>Are the results exact?</h3><p>No. Results are estimates and general information only, based on the numbers you enter and the fee rates shown on the page. Always check the platform&#x27;s current fee page before you price or buy.</p></section><p class="mut">Results are estimates and general information only. Platform fees change, so check the platform's current fee page before making a pricing decision.</p><section class="cta-grad"><h2>Start with a free calculator</h2><p>Pick a calculator, enter your own numbers, and see an estimate. No sign-up, no download.</p><p><a class="cta-btn" href="index.html#categories">Browse calculators</a></p></section></main><footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="index.html#guides">Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><b>Categories</b><a href="calculators/etsy-fee-calculator.html">Etsy</a><a href="calculators/ebay-final-value-fee-calculator.html">eBay</a><a href="calculators/amazon-fba-profit-calculator.html">Amazon</a><a href="calculators/shipping-cost-comparison-calculator.html">Shipping</a><a href="calculators/tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="calculators/print-on-demand-profit-calculator.html">Print on Demand</a><a href="calculators/dropshipping-margin-calculator.html">Dropshipping</a><a href="calculators/handmade-pricing-calculator.html">Handmade</a><a href="calculators/wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="how-our-calculators-are-checked.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+<script src="assets/theme.js"></script>
+<script src="assets/engage.js"></script>
+<script src="assets/chatbot.js"></script></body>
+</html>

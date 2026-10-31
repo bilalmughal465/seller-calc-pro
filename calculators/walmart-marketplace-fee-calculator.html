@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walmart Marketplace Fee Calculator - SellerCalc</title>
+<meta name="description" content="Estimate Walmart Marketplace's referral fee on a sale by category, and what you keep before your own costs. Walmart charges no monthly seller fee.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/walmart-marketplace-fee-calculator.html">
+<meta property="og:title" content="Walmart Marketplace Fee Calculator - SellerCalc">
+<meta property="og:description" content="Estimate Walmart Marketplace's referral fee on a sale by category, and what you keep before your own costs. Walmart charges no monthly seller fee.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/walmart-marketplace-fee-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Walmart Marketplace Fee Calculator",
+"description": "Estimate Walmart Marketplace's referral fee on a sale by category, and what you keep before your own costs. Walmart charges no monthly seller fee.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Does Walmart Marketplace charge a monthly fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. There is no setup fee, monthly subscription or listing fee; you pay a referral fee only when an item sells, plus fulfillment costs if you use Walmart Fulfillment Services."
+}
+},
+{
+"@type": "Question",
+"name": "What is the most common Walmart referral fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "15% of the total sales price, which covers most categories including home, toys, books and the Everything Else bucket."
+}
+},
+{
+"@type": "Question",
+"name": "Is the referral fee charged on shipping?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. The fee is calculated on the total sales price, which includes the item price plus shipping, handling and gift-wrap charges you bill the buyer."
+}
+},
+{
+"@type": "Question",
+"name": "How do tiered categories work?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The rate changes across price bands of the total sales price. Apparel pays 5% up to $15, 10% from $15 to $20 and 15% above $20; jewelry pays 20% on the first $250 and 5% on the rest."
+}
+},
+{
+"@type": "Question",
+"name": "Why should I confirm my category in Seller Center?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Walmart assigns a contract category during item setup, and the rate on your Statements page is the one that actually applies. Published rates can change, so check yours before you lock in a price."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Walmart Marketplace Fee Calculator",
+"item": "https://seller-calc-pro.com/calculators/walmart-marketplace-fee-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Walmart</p>
+<h1>Walmart Marketplace Fee Calculator</h1>
+<p class="mut">Estimate Walmart Marketplace's referral fee on a sale by category, and what you keep before your own costs. Walmart charges no monthly seller fee.</p>
+<div class="card">
+<label>Item price ($) <input id="price" type="number" value="60" min="0" step="0.01"></label><br><label>Shipping and handling charged to the buyer ($) <input id="ship" type="number" value="0" min="0" step="0.01"></label><br><label>Category <select id="cat"><option value="flat15" selected>Most categories / Everything Else — 15%</option><option value="electronics">Consumer Electronics — 8%</option><option value="pcs">Personal Computers — 6%</option><option value="apparel">Apparel &amp; Accessories — tiered</option><option value="jewelry">Jewelry — tiered</option></select></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The result shows the referral fee on the total sales price — item price plus any shipping and handling you charge the buyer — and what remains before your item and delivery costs. Walmart charges no setup or monthly fee, so the referral fee is the standing per-sale cost for a seller who ships orders themselves.</p>
+<script>
+function tiered(total,tiers){var fee=0,prev=0;for(var i=0;i<tiers.length;i++){var cap=tiers[i][0],rate=tiers[i][1];var part=Math.max(0,Math.min(total,cap)-prev);fee+=part*rate;prev=cap;if(total<=cap)break;}return fee;}function calc(){var p=parseFloat(document.getElementById('price').value);var s=parseFloat(document.getElementById('ship').value)||0;var c=document.getElementById('cat').value;var o=document.getElementById('out');if(isNaN(p)||p<0||s<0){o.textContent='Enter amounts of $0 or more for price and shipping.';return;}var total=p+s,fee=0;if(c==='flat15')fee=total*0.15;else if(c==='electronics')fee=total*0.08;else if(c==='pcs')fee=total*0.06;else if(c==='apparel')fee=tiered(total,[[15,0.05],[20,0.10],[Infinity,0.15]]);else if(c==='jewelry')fee=tiered(total,[[250,0.20],[Infinity,0.05]]);fee=Math.round(fee*100)/100;var keep=Math.round((total-fee)*100)/100;o.textContent='Total sales price: $'+total.toFixed(2)+' — Referral fee: $'+fee.toFixed(2)+' — You keep: $'+keep.toFixed(2)+' (before your item and delivery costs).';}
+["price", "ship", "cat"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Referral fee = category rate × total sales price. Total sales price = item price + shipping and handling charged to the buyer. Tiered categories split the total across price bands: Apparel is 5% up to $15, 10% from $15 to $20 and 15% above $20; Jewelry is 20% on the first $250 and 5% above $250.</p>
+<h2>How it works</h2><p>Enter the item price and any shipping you charge the buyer, then pick the category closest to your product. Most categories, including home, toys and the general Everything Else bucket, pay 15%. Electronics pays 8% and personal computers 6%. For apparel and jewelry the calculator applies the tiered bands to the total sales price, not just the item price.</p>
+<h2>Worked example</h2><p>A $60 home item with no buyer-paid shipping: the total sales price is $60.00 and the referral fee at 15% is $9.00, leaving $51.00 before item and delivery costs. The same $60 item in consumer electronics would pay 8%, which is $4.80, leaving $55.20.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>Does Walmart Marketplace charge a monthly fee?</h3><p>No. There is no setup fee, monthly subscription or listing fee; you pay a referral fee only when an item sells, plus fulfillment costs if you use Walmart Fulfillment Services.</p><h3>What is the most common Walmart referral fee?</h3><p>15% of the total sales price, which covers most categories including home, toys, books and the Everything Else bucket.</p><h3>Is the referral fee charged on shipping?</h3><p>Yes. The fee is calculated on the total sales price, which includes the item price plus shipping, handling and gift-wrap charges you bill the buyer.</p><h3>How do tiered categories work?</h3><p>The rate changes across price bands of the total sales price. Apparel pays 5% up to $15, 10% from $15 to $20 and 15% above $20; jewelry pays 20% on the first $250 and 5% on the rest.</p><h3>Why should I confirm my category in Seller Center?</h3><p>Walmart assigns a contract category during item setup, and the rate on your Statements page is the one that actually applies. Published rates can change, so check yours before you lock in a price.</p>
+</section>
+<p class="mut">Stand: October 2026. Category rates are the published Walmart Marketplace schedule (Walmart Marketplace Learn referral fee schedule, last updated March 9, 2026); confirm your contract category rate in Seller Center before pricing. Source: <a href="https://marketplacelearn.walmart.com/guides/Getting%20started/Onboarding/Referral-fee-schedule-for-contract-categories">Walmart Marketplace Learn — Referral fee schedule for contract categories</a>.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="amazon-referral-fee-calculator.html">Amazon Referral Fee Calculator</a></p><p><a href="amazon-fba-profit-calculator.html">Amazon FBA Profit Calculator</a></p><p><a href="seller-fees-comparison-calculator.html">Seller Fees Comparison Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

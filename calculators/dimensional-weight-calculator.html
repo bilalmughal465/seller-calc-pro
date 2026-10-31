@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimensional Weight Calculator - SellerCalc</title>
+<meta name="description" content="Find the dimensional weight of a box and the billable weight carriers charge: the greater of dimensional weight and actual weight.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/dimensional-weight-calculator.html">
+<meta property="og:title" content="Dimensional Weight Calculator - SellerCalc">
+<meta property="og:description" content="Find the dimensional weight of a box and the billable weight carriers charge: the greater of dimensional weight and actual weight.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/dimensional-weight-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}a{color:#1D4ED8;text-decoration:underline}.card input,.card select{border:1.5px solid #64748B;border-radius:8px;padding:8px;margin:4px 0}.card button{background:#F97316;color:#0F172A;border:0;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer}.card button:hover{background:#EA580C}.card button:active{background:#C2410C}.result{color:#172554;font-weight:700}label{display:block;margin:8px 0}.cta-btn{background:#F97316!important;color:#0F172A!important;text-decoration:none}.cta-btn:hover{background:#EA580C!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Dimensional Weight Calculator", "description": "Find the dimensional weight of a box and the billable weight carriers charge: the greater of dimensional weight and actual weight.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web", "url": "https://seller-calc-pro.com/calculators/dimensional-weight-calculator.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is the divisor 139 and not another number?", "acceptedAnswer": {"@type": "Answer", "text": "139 cubic inches per pound is the published divisor for UPS Daily Rates and for FedEx domestic shipments, and for USPS parcels over one cubic foot since July 12, 2026. UPS Retail Rates (counter prices) use 166 instead, which gives a lower dimensional weight."}}, {"@type": "Question", "name": "Does dimensional weight apply to every parcel?", "acceptedAnswer": {"@type": "Answer", "text": "UPS and FedEx can apply it to any parcel in customer packaging. USPS applies dimensional-weight pricing only to parcels larger than one cubic foot (1,728 cubic inches); smaller USPS parcels are billed by actual weight."}}, {"@type": "Question", "name": "Why are the sides rounded up before multiplying?", "acceptedAnswer": {"@type": "Answer", "text": "Carriers round each measurement up to the next whole inch first, so a 12.2 inch side counts as 13 inches. That rounding alone can raise the billable weight, which is why measuring the packed box exactly matters."}}, {"@type": "Question", "name": "What if my contract has a different divisor?", "acceptedAnswer": {"@type": "Answer", "text": "A negotiated carrier contract can set a different divisor. If yours does, use the UPS Retail Rates option only as a rough guide and confirm your contract divisor with your carrier before quoting prices."}}, {"@type": "Question", "name": "How do I lower a high dimensional weight?", "acceptedAnswer": {"@type": "Answer", "text": "Use the smallest box that protects the item, remove empty space, and avoid oversized outer packaging. Even one inch off each side can drop the billable weight by several pounds."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://seller-calc-pro.com/"}, {"@type": "ListItem", "position": 2, "name": "Dimensional Weight Calculator", "item": "https://seller-calc-pro.com/calculators/dimensional-weight-calculator.html"}]}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Shipping</p>
+<h1>Dimensional Weight Calculator</h1>
+<p class="mut">Enter the outside measurements of your packed box and its actual weight. The calculator works out the dimensional weight and tells you which weight the carrier will bill.</p>
+<div class="card">
+<label>Length (inches) <input id="l" type="number" value="24" step="0.01" min="0"></label><br>
+<label>Width (inches) <input id="w" type="number" value="18" step="0.01" min="0"></label><br>
+<label>Height (inches) <input id="h" type="number" value="12" step="0.01" min="0"></label><br>
+<label>Actual weight (lb) <input id="aw" type="number" value="3" step="0.01" min="0"></label><br>
+<label>Carrier divisor <select id="div"><option value="139" selected>139 — UPS Daily Rates, FedEx, USPS over 1 cu ft</option><option value="166">166 — UPS Retail Rates</option></select></label><br>
+<button onclick="calc()">Calculate</button>
+<div class="result" id="out">&mdash;</div>
+</div>
+<p>Carriers bill the greater of the box's actual weight and its dimensional weight, which is the space the box takes up converted into pounds. A big, light box can therefore be billed at far more than it weighs on a scale.</p>
+<script>
+function money(n){return (n<0?'-$':'$')+Math.abs(n).toFixed(2);}
+function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?NaN:v;}
+function calc(){
+var o=document.getElementById('out');
+var l=num('l'),w=num('w'),h=num('h'),aw=num('aw'),div=num('div');
+ if([l,w,h,aw,div].some(isNaN)){o.textContent='Please enter a number in every field.';return;}
+ if(l<=0||w<=0||h<=0){o.textContent='Length, width and height must be above zero.';return;}
+ if(aw<0){o.textContent='Actual weight cannot be negative.';return;}
+ var cl=Math.ceil(l),cw=Math.ceil(w),ch=Math.ceil(h);
+ var cubic=cl*cw*ch, dim=cubic/div, dimUp=Math.ceil(dim), bill=Math.max(dimUp,Math.ceil(aw));
+ o.textContent='Cubic size: '+cubic.toLocaleString('en-US')+' cu in | Dimensional weight: '+dim.toFixed(2)+' lb, rounded up to '+dimUp+' lb | Billable weight: '+bill+' lb.';
+}
+document.getElementById('l').addEventListener('input',calc);
+document.getElementById('w').addEventListener('input',calc);
+document.getElementById('h').addEventListener('input',calc);
+document.getElementById('aw').addEventListener('input',calc);
+document.getElementById('div').addEventListener('change',calc);
+calc();
+</script>
+<h2>Formula</h2><p>Dimensional weight = (length &times; width &times; height in inches) &divide; divisor, rounded up to the next whole pound. Billable weight = the greater of dimensional weight and actual weight. Each side is rounded up to the next whole inch before multiplying.</p>
+<h2>How it works</h2><p>Measure the outside of the packed box, longest side first. Each side rounds up to the next whole inch, then the three sides are multiplied and divided by the carrier divisor. Compare that result with the actual weight rounded up: the carrier bills whichever is higher.</p>
+<h2>Worked example</h2><p>A 24 &times; 18 &times; 12 inch box is 5,184 cubic inches. Divided by 139, that is 37.29 lb, rounded up to 38 lb. The actual weight is 3 lb, so the billable weight is 38 lb — the box is billed at 38 lb even though it weighs only 3 lb on a scale.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>Why is the divisor 139 and not another number?</h3><p>139 cubic inches per pound is the published divisor for UPS Daily Rates and for FedEx domestic shipments, and for USPS parcels over one cubic foot since July 12, 2026. UPS Retail Rates (counter prices) use 166 instead, which gives a lower dimensional weight.</p>
+<h3>Does dimensional weight apply to every parcel?</h3><p>UPS and FedEx can apply it to any parcel in customer packaging. USPS applies dimensional-weight pricing only to parcels larger than one cubic foot (1,728 cubic inches); smaller USPS parcels are billed by actual weight.</p>
+<h3>Why are the sides rounded up before multiplying?</h3><p>Carriers round each measurement up to the next whole inch first, so a 12.2 inch side counts as 13 inches. That rounding alone can raise the billable weight, which is why measuring the packed box exactly matters.</p>
+<h3>What if my contract has a different divisor?</h3><p>A negotiated carrier contract can set a different divisor. If yours does, use the UPS Retail Rates option only as a rough guide and confirm your contract divisor with your carrier before quoting prices.</p>
+<h3>How do I lower a high dimensional weight?</h3><p>Use the smallest box that protects the item, remove empty space, and avoid oversized outer packaging. Even one inch off each side can drop the billable weight by several pounds.</p>
+</section>
+<p class="mut">Stand: October 2026. Divisors: UPS Daily Rates 139 and Retail Rates 166, and FedEx 139, per the carriers' published dimensional-weight pages. USPS 139 for parcels over 1 cubic foot is reported from USPS mailing standards effective July 12, 2026 and is not yet confirmed from a live USPS page in this batch; confirm it with USPS before quoting. Sources: <a href="https://www.ups.com/us/en/support/shipping-support/shipping-dimensions-weight">UPS — Shipping Dimensions and Weight</a>, <a href="https://www.fedex.com/en-ca/resources-tools/dimensional-weight.html">FedEx — About Dimensional Weight</a>.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Your actual fees, shipping costs and profit depend on your marketplace account, category, shipping service and buyer location. Check the figures that apply to you before pricing a listing.</p>
+<h2>Related calculators</h2>
+<p><a href="shipping-cost-comparison-calculator.html">Shipping Cost Comparison Calculator</a></p>
+<p><a href="shipping-profit-calculator.html">Shipping Profit Calculator</a></p>
+<p><a href="international-shipping-estimator.html">International Shipping Estimator</a></p>
+
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Start with a free calculator</h2><p>Search, pick a calculator, and get an instant result. No sign-up, no download.</p><p><a class="cta-btn" href="../index.html"><span class="mix">Browse calculators</span></a></p><p><a href="../about.html">About SellerCalc</a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc &mdash; Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

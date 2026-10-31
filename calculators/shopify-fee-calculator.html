@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify Fee Calculator - SellerCalc</title>
+<meta name="description" content="Estimate what a Shopify store costs per month: the subscription plus card fees on your orders, with or without Shopify Payments.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/shopify-fee-calculator.html">
+<meta property="og:title" content="Shopify Fee Calculator - SellerCalc">
+<meta property="og:description" content="Estimate what a Shopify store costs per month: the subscription plus card fees on your orders, with or without Shopify Payments.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/shopify-fee-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Shopify Fee Calculator",
+"description": "Estimate what a Shopify store costs per month: the subscription plus card fees on your orders, with or without Shopify Payments.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How much is Shopify Basic per month?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "For US stores, $39 per month paid monthly or $29 per month paid yearly, with online standard card rates of 2.9% + $0.30 when using Shopify Payments."
+}
+},
+{
+"@type": "Question",
+"name": "Do I pay extra if I use PayPal or another gateway?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes, unless it runs through Shopify Payments. Shopify adds a third-party transaction fee \u2014 2% on Basic, 1% on Grow and 0.6% on Advanced \u2014 on top of what your provider charges."
+}
+},
+{
+"@type": "Question",
+"name": "Is there a Shopify fee on top of card fees with Shopify Payments?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. With Shopify Payments you pay only the card rate for your plan; the extra transaction fee applies only to third-party providers."
+}
+},
+{
+"@type": "Question",
+"name": "Does the subscription depend on how much I sell?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No, the subscription is flat for the plan. Higher plans cost more per month but charge lower card and third-party rates, so they pay off only once your volume is high enough."
+}
+},
+{
+"@type": "Question",
+"name": "What is not included in this calculator?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Apps, premium themes, shipping label costs, and any payment provider's own fees if you use a third-party gateway. Add those separately for a full monthly picture."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Shopify Fee Calculator",
+"item": "https://seller-calc-pro.com/calculators/shopify-fee-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Shopify</p>
+<h1>Shopify Fee Calculator</h1>
+<p class="mut">Estimate what a Shopify store costs per month: the subscription plus card fees on your orders, with or without Shopify Payments.</p>
+<div class="card">
+<label>Average order value ($) <input id="aov" type="number" value="50" min="0" step="0.01"></label><br><label>Orders per month <input id="orders" type="number" value="100" min="0" step="1"></label><br><label>Plan <select id="plan"><option value="basic" selected>Basic</option><option value="grow">Grow</option><option value="advanced">Advanced</option></select></label><br><label>Billing <select id="bill"><option value="monthly" selected>Pay monthly</option><option value="yearly">Pay yearly (per-month price)</option></select></label><br><label><input id="third" type="checkbox"> Using a third-party payment provider instead of Shopify Payments</label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The result breaks the monthly bill into its three parts: the plan subscription, the card fees on every order, and, only if you use another payment provider, Shopify's extra third-party transaction fee. With Shopify Payments there is no extra Shopify fee beyond the card rate. Apps, themes and shipping labels are not included, so treat the total as the platform-and-payments part of your costs.</p>
+<script>
+function fmt(n){return (n<0?'-$':'$')+Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}function calc(){var a=parseFloat(document.getElementById('aov').value);var n=parseFloat(document.getElementById('orders').value);var plan=document.getElementById('plan').value;var bill=document.getElementById('bill').value;var third=document.getElementById('third').checked;var o=document.getElementById('out');if(isNaN(a)||a<0||isNaN(n)||n<0){o.textContent='Enter an order value and order count of 0 or more.';return;}var sub={basic:{m:39,y:29,card:0.029,third:0.02},grow:{m:105,y:89,card:0.027,third:0.01},advanced:{m:399,y:359,card:0.025,third:0.006}}[plan];var monthlySub=(bill==='yearly')?sub.y:sub.m;var sales=a*n;var cardFees=n*(a*sub.card+0.30);var thirdFees=third?sales*sub.third:0;var total=monthlySub+cardFees+thirdFees;var perOrder=n>0?total/n:0;o.textContent='Monthly sales: '+fmt(sales)+' — Card fees: '+fmt(cardFees)+(third?' + Third-party fees: '+fmt(thirdFees):'')+' + Subscription: '+fmt(monthlySub)+' = Total monthly cost: '+fmt(total)+' ('+fmt(perOrder)+' per order).';}
+["aov", "orders", "plan", "bill", "third"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Monthly card fees = orders × (card rate × average order value + $0.30). Third-party fee = third-party rate × monthly sales, only when you use another payment provider. Total monthly cost = subscription + card fees + third-party fee. Basic card rate is 2.9% + $0.30 online; third-party rate is 2% on Basic.</p>
+<h2>How it works</h2><p>Enter your average order value and how many orders you expect in a month, then pick your plan and billing. Leave the third-party box unchecked if you use Shopify Payments. The calculator uses Basic's verified rates by default; Grow and Advanced use their published lower card rates (2.7% and 2.5% plus $0.30) and lower third-party rates, so confirm them on Shopify's pricing page for your store's country.</p>
+<h2>Worked example</h2><p>100 orders at a $50 average on Basic, paid monthly, with Shopify Payments: monthly sales are $5,000. Card fees are 100 × (2.9% of $50 + $0.30) = 100 × $1.75 = $175.00. Add the $39.00 subscription and the total monthly cost is $214.00, which is $2.14 per order. Switching to yearly billing would cut the subscription to $29.00 and the total to $204.00.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>How much is Shopify Basic per month?</h3><p>For US stores, $39 per month paid monthly or $29 per month paid yearly, with online standard card rates of 2.9% + $0.30 when using Shopify Payments.</p><h3>Do I pay extra if I use PayPal or another gateway?</h3><p>Yes, unless it runs through Shopify Payments. Shopify adds a third-party transaction fee — 2% on Basic, 1% on Grow and 0.6% on Advanced — on top of what your provider charges.</p><h3>Is there a Shopify fee on top of card fees with Shopify Payments?</h3><p>No. With Shopify Payments you pay only the card rate for your plan; the extra transaction fee applies only to third-party providers.</p><h3>Does the subscription depend on how much I sell?</h3><p>No, the subscription is flat for the plan. Higher plans cost more per month but charge lower card and third-party rates, so they pay off only once your volume is high enough.</p><h3>What is not included in this calculator?</h3><p>Apps, premium themes, shipping label costs, and any payment provider's own fees if you use a third-party gateway. Add those separately for a full monthly picture.</p>
+</section>
+<p class="mut">Stand: October 2026. Basic plan verified on the official page: <a href="https://www.shopify.com/pricing">Shopify — Pricing</a> ($39 monthly / $29 yearly, 2.9% + 30¢ online, 2% third-party). Grow and Advanced rates are published rates to confirm on the same page for your country.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="payment-processing-fee-calculator.html">Payment Processing Fee Calculator</a></p><p><a href="profit-margin-calculator.html">Profit Margin Calculator</a></p><p><a href="break-even-calculator.html">Break-Even Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

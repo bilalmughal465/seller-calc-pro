@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROAS Calculator - SellerCalc</title>
+<meta name="description" content="Work out return on ad spend from your ad cost and attributed revenue, and check it against the break-even ROAS your margin allows.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/roas-calculator.html">
+<meta property="og:title" content="ROAS Calculator - SellerCalc">
+<meta property="og:description" content="Work out return on ad spend from your ad cost and attributed revenue, and check it against the break-even ROAS your margin allows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/roas-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "ROAS Calculator",
+"description": "Work out return on ad spend from your ad cost and attributed revenue, and check it against the break-even ROAS your margin allows.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Is ROAS the same as profit?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. ROAS compares revenue with ad spend only. A campaign can have strong ROAS and still lose money after product, fulfillment and returns costs, which is why break-even ROAS matters."
+}
+},
+{
+"@type": "Question",
+"name": "What is break-even ROAS?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The ROAS multiple at which ad-driven sales exactly cover product costs: 1 divided by your gross margin. At 40% margin it is 2.50x; at 25% margin it is 4.00x, so thinner margins need higher ROAS."
+}
+},
+{
+"@type": "Question",
+"name": "What is a good ROAS?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "It depends on your margin. A 3.00x ROAS is profitable at a 40% margin (break-even 2.50x) but unprofitable at a 20% margin (break-even 5.00x). Judge it against your own break-even, not a universal target."
+}
+},
+{
+"@type": "Question",
+"name": "How should I measure attributed revenue?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Use the platform's attributed figure for the same period as the spend, then sanity-check it against real orders, because attribution is never exact and can overstate what the ads caused."
+}
+},
+{
+"@type": "Question",
+"name": "Does this calculator include fees and shipping?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Only through your gross margin figure. Enter a margin that already reflects product, fees and delivery costs on those sales, so the break-even comparison is honest."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "ROAS Calculator",
+"item": "https://seller-calc-pro.com/calculators/roas-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Advertising</p>
+<h1>ROAS Calculator</h1>
+<p class="mut">Work out return on ad spend from your ad cost and attributed revenue, and check it against the break-even ROAS your margin allows.</p>
+<div class="card">
+<label>Ad spend ($) <input id="spend" type="number" value="500" min="0" step="0.01"></label><br><label>Revenue attributed to ads ($) <input id="rev" type="number" value="2000" min="0" step="0.01"></label><br><label>Gross margin on those sales (%) <input id="margin" type="number" value="40" min="0" max="100" step="0.1"></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>ROAS is revenue, not profit: a campaign can return four dollars per ad dollar and still lose money once product costs are paid. That is why this page also shows break-even ROAS — the multiple your margin requires — so you can judge a campaign against your own numbers instead of a generic 'good ROAS' claim.</p>
+<script>
+function calc(){var s=parseFloat(document.getElementById('spend').value);var r=parseFloat(document.getElementById('rev').value)||0;var m=parseFloat(document.getElementById('margin').value);var o=document.getElementById('out');if(isNaN(s)||s<=0||r<0||isNaN(m)||m<0||m>100){o.textContent='Enter ad spend above $0, revenue of $0 or more, and a margin between 0 and 100.';return;}var roas=r/s;var pct=Math.round(roas*100);var be=m>0?1/(m/100):0;var verdict=be>0?(roas>be?'Above break-even ROAS — the ads cover their cost after product costs.':(roas===be?'Exactly at break-even ROAS.':'Below break-even ROAS — the ads do not cover their cost after product costs.')):'Enter a margin above 0 to compare with break-even ROAS.';o.textContent='ROAS: '+roas.toFixed(2)+'x ('+pct+'% of spend returned as revenue) — Break-even ROAS: '+be.toFixed(2)+'x — '+verdict;}
+["spend", "rev", "margin"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>ROAS = revenue attributed to ads ÷ ad spend. Break-even ROAS = 1 ÷ gross margin (as a decimal). At a 40% margin, break-even ROAS is 1 ÷ 0.40 = 2.50x: below that, ad-driven sales lose money after product costs.</p>
+<h2>How it works</h2><p>Enter what the ads cost and the revenue attributed to them over the same period, then enter your gross margin on those sales — the share of revenue left after product and delivery costs, before ad spend. The calculator shows the ROAS multiple, the percentage of spend returned as revenue, and the break-even multiple your margin sets. Compare the two multiples, not the ROAS alone.</p>
+<h2>Worked example</h2><p>$2,000 of attributed revenue on $500 of ad spend gives a ROAS of $2,000 ÷ $500 = 4.00x, which is 400% of spend returned as revenue. At a 40% gross margin, break-even ROAS is 1 ÷ 0.40 = 2.50x, so 4.00x sits above break-even and the campaign covers its cost after product costs.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>Is ROAS the same as profit?</h3><p>No. ROAS compares revenue with ad spend only. A campaign can have strong ROAS and still lose money after product, fulfillment and returns costs, which is why break-even ROAS matters.</p><h3>What is break-even ROAS?</h3><p>The ROAS multiple at which ad-driven sales exactly cover product costs: 1 divided by your gross margin. At 40% margin it is 2.50x; at 25% margin it is 4.00x, so thinner margins need higher ROAS.</p><h3>What is a good ROAS?</h3><p>It depends on your margin. A 3.00x ROAS is profitable at a 40% margin (break-even 2.50x) but unprofitable at a 20% margin (break-even 5.00x). Judge it against your own break-even, not a universal target.</p><h3>How should I measure attributed revenue?</h3><p>Use the platform's attributed figure for the same period as the spend, then sanity-check it against real orders, because attribution is never exact and can overstate what the ads caused.</p><h3>Does this calculator include fees and shipping?</h3><p>Only through your gross margin figure. Enter a margin that already reflects product, fees and delivery costs on those sales, so the break-even comparison is honest.</p>
+</section>
+<p class="mut">Stand: October 2026. Pure arithmetic — no platform rate is used; enter your own figures.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="break-even-calculator.html">Break-Even Calculator</a></p><p><a href="profit-margin-calculator.html">Profit Margin Calculator</a></p><p><a href="promoted-listings-fee-calculator.html">Promoted Listings Fee Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

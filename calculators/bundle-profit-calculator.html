@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bundle Profit Calculator - SellerCalc</title>
+<meta name="description" content="Price a multi-item bundle: combine item costs, one shipping charge and fees to find bundle profit and profit per item.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/bundle-profit-calculator.html">
+<meta property="og:title" content="Bundle Profit Calculator - SellerCalc">
+<meta property="og:description" content="Price a multi-item bundle: combine item costs, one shipping charge and fees to find bundle profit and profit per item.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/bundle-profit-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}a{color:#1D4ED8;text-decoration:underline}.card input,.card select{border:1.5px solid #64748B;border-radius:8px;padding:8px;margin:4px 0}.card button{background:#F97316;color:#0F172A;border:0;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer}.card button:hover{background:#EA580C}.card button:active{background:#C2410C}.result{color:#172554;font-weight:700}label{display:block;margin:8px 0}.cta-btn{background:#F97316!important;color:#0F172A!important;text-decoration:none}.cta-btn:hover{background:#EA580C!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bundle Profit Calculator", "description": "Price a multi-item bundle: combine item costs, one shipping charge and fees to find bundle profit and profit per item.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web", "url": "https://seller-calc-pro.com/calculators/bundle-profit-calculator.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why bundle items instead of selling them separately?", "acceptedAnswer": {"@type": "Answer", "text": "You pay shipping and the fixed payment fee once instead of once per item, and buyers often spend more on a bundle than on a single item. The saving only helps if the bundle price still leaves a healthy profit per item."}}, {"@type": "Question", "name": "Should the bundle price be lower than the items bought separately?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes \u2014 the discount is the buyer's reason to take the bundle. Use the discount-profit calculator to check that the bundle discount does not push profit per item below what you accept."}}, {"@type": "Question", "name": "What if the items in the bundle cost different amounts?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the average cost per item, or add the individual costs together and divide by the item count. For exact figures, use the total cost divided by the number of items as the cost per item."}}, {"@type": "Question", "name": "Does the marketplace fee apply to the whole bundle price?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The fee percentage is charged on the total amount the buyer pays for the bundle, just as it would be on a single-item sale."}}, {"@type": "Question", "name": "What if a buyer returns only part of a bundle?", "acceptedAnswer": {"@type": "Answer", "text": "Partial returns can leave you with return shipping and a refunded share of the price while the fixed fee stays spent. Price bundles with enough margin to absorb the occasional partial return."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://seller-calc-pro.com/"}, {"@type": "ListItem", "position": 2, "name": "Bundle Profit Calculator", "item": "https://seller-calc-pro.com/calculators/bundle-profit-calculator.html"}]}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Pricing</p>
+<h1>Bundle Profit Calculator</h1>
+<p class="mut">Enter how many items are in the bundle, what each one costs, the bundle price, the single shipping cost and your fees. The calculator shows total bundle profit and profit per item.</p>
+<div class="card">
+<label>Number of items in bundle <input id="n" type="number" value="3" step="0.01" min="0"></label><br>
+<label>Cost per item ($) <input id="cost" type="number" value="8" step="0.01" min="0"></label><br>
+<label>Bundle price ($) <input id="price" type="number" value="59" step="0.01" min="0"></label><br>
+<label>Shipping cost for the bundle ($) <input id="ship" type="number" value="7" step="0.01" min="0"></label><br>
+<label>Marketplace fee (%) <input id="mkt" type="number" value="13" step="0.01" min="0"></label><br>
+<label>Payment fee (%) <input id="pay" type="number" value="2.9" step="0.01" min="0"></label><br>
+<label>Payment fixed fee ($) <input id="fixed" type="number" value="0.30" step="0.01" min="0"></label><br>
+<button onclick="calc()">Calculate</button>
+<div class="result" id="out">&mdash;</div>
+</div>
+<p>A bundle's advantage is shipping: one parcel instead of several, and one fixed payment fee instead of one per item. The calculator keeps that saving visible by charging shipping and the fixed fee only once for the whole bundle.</p>
+<script>
+function money(n){return (n<0?'-$':'$')+Math.abs(n).toFixed(2);}
+function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?NaN:v;}
+function calc(){
+var o=document.getElementById('out');
+var n=num('n'),cost=num('cost'),price=num('price'),ship=num('ship'),mkt=num('mkt'),pay=num('pay'),fixed=num('fixed');
+ if([n,cost,price,ship,mkt,pay,fixed].some(isNaN)){o.textContent='Please enter a number in every field.';return;}
+ if(n<1||Math.floor(n)!==n){o.textContent='Number of items must be a whole number of 1 or more.';return;}
+ if(price<=0){o.textContent='Bundle price must be above zero.';return;}
+ if(mkt<0||mkt>=100||pay<0||pay>=100){o.textContent='Fee percentages must be between 0 and 100.';return;}
+ var tc=n*cost, mf=price*mkt/100, pf=price*pay/100+fixed, profit=price-tc-ship-mf-pf;
+ o.textContent='Total item cost: '+money(tc)+' | Fees: '+money(mf+pf)+' | Bundle profit: '+money(profit)+' ('+money(profit/n)+' per item).';
+}
+document.getElementById('n').addEventListener('input',calc);
+document.getElementById('cost').addEventListener('input',calc);
+document.getElementById('price').addEventListener('input',calc);
+document.getElementById('ship').addEventListener('input',calc);
+document.getElementById('mkt').addEventListener('input',calc);
+document.getElementById('pay').addEventListener('input',calc);
+document.getElementById('fixed').addEventListener('input',calc);
+calc();
+</script>
+<h2>Formula</h2><p>Total item cost = items &times; cost per item. Fees = (bundle price &times; marketplace fee %) + (bundle price &times; payment fee % + fixed fee). Bundle profit = bundle price &minus; total item cost &minus; shipping &minus; fees. Profit per item = bundle profit &divide; items.</p>
+<h2>How it works</h2><p>Add up what all the items in the bundle cost you, then subtract that, the single shipping charge and the fees from the bundle price. Dividing the result by the item count shows whether each item in the bundle earns as much as it would on its own.</p>
+<h2>Worked example</h2><p>A 3-item bundle at $59.00, with each item costing $8.00 and bundle shipping of $7.00. Total item cost: 3 &times; $8.00 = $24.00. Marketplace fee: $59.00 &times; 13% = $7.67. Payment fee: $59.00 &times; 2.9% + $0.30 = $2.01. Bundle profit: $59.00 &minus; $24.00 &minus; $7.00 &minus; $7.67 &minus; $2.01 = $18.32, which is $6.11 per item.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>Why bundle items instead of selling them separately?</h3><p>You pay shipping and the fixed payment fee once instead of once per item, and buyers often spend more on a bundle than on a single item. The saving only helps if the bundle price still leaves a healthy profit per item.</p>
+<h3>Should the bundle price be lower than the items bought separately?</h3><p>Usually yes — the discount is the buyer&#x27;s reason to take the bundle. Use the discount-profit calculator to check that the bundle discount does not push profit per item below what you accept.</p>
+<h3>What if the items in the bundle cost different amounts?</h3><p>Enter the average cost per item, or add the individual costs together and divide by the item count. For exact figures, use the total cost divided by the number of items as the cost per item.</p>
+<h3>Does the marketplace fee apply to the whole bundle price?</h3><p>Yes. The fee percentage is charged on the total amount the buyer pays for the bundle, just as it would be on a single-item sale.</p>
+<h3>What if a buyer returns only part of a bundle?</h3><p>Partial returns can leave you with return shipping and a refunded share of the price while the fixed fee stays spent. Price bundles with enough margin to absorb the occasional partial return.</p>
+</section>
+<p class="mut">Stand: October 2026. Pure arithmetic — no platform rate is used; enter your own figures.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Your actual fees, shipping costs and profit depend on your marketplace account, category, shipping service and buyer location. Check the figures that apply to you before pricing a listing.</p>
+<h2>Related calculators</h2>
+<p><a href="discount-profit-calculator.html">Discount Profit Calculator</a></p>
+<p><a href="price-to-profit-calculator.html">Price to Profit Calculator</a></p>
+<p><a href="return-cost-calculator.html">Return Cost Calculator</a></p>
+
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Start with a free calculator</h2><p>Search, pick a calculator, and get an instant result. No sign-up, no download.</p><p><a class="cta-btn" href="../index.html"><span class="mix">Browse calculators</span></a></p><p><a href="../about.html">About SellerCalc</a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc &mdash; Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon Referral Fee Calculator - SellerCalc</title>
+<meta name="description" content="Work out Amazon's referral fee on a single sale by category, including the $0.30 minimum and the media closing fee where it applies.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/amazon-referral-fee-calculator.html">
+<meta property="og:title" content="Amazon Referral Fee Calculator - SellerCalc">
+<meta property="og:description" content="Work out Amazon's referral fee on a single sale by category, including the $0.30 minimum and the media closing fee where it applies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/amazon-referral-fee-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Amazon Referral Fee Calculator",
+"description": "Work out Amazon's referral fee on a single sale by category, including the $0.30 minimum and the media closing fee where it applies.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is Amazon's standard referral fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "15% of the total sale price in most categories, with a $0.30 minimum per item. Electronics and computers pay 8%, while some categories pay more or use tiered rates."
+}
+},
+{
+"@type": "Question",
+"name": "Is the referral fee charged on shipping?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. It is calculated on the total sale price, which includes the item price plus shipping charged to the buyer and gift wrap, but not sales tax."
+}
+},
+{
+"@type": "Question",
+"name": "What is the $1.80 closing fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A per-item fee added on media categories \u2014 books, music, video, DVD and software \u2014 on top of the referral fee. It does not apply to non-media products."
+}
+},
+{
+"@type": "Question",
+"name": "Does the referral fee depend on my selling plan?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Both Individual and Professional sellers pay the same referral fee; the plans differ in that Individual sellers pay $0.99 per item sold while Professional sellers pay $39.99 per month with no per-item plan fee."
+}
+},
+{
+"@type": "Question",
+"name": "Why is my category rate different from 15%?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Amazon sets referral rates by category and sometimes by price band within a category. Check your product's category in Seller Central's fee schedule, since a misclassified listing can be charged at the wrong rate."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Amazon Referral Fee Calculator",
+"item": "https://seller-calc-pro.com/calculators/amazon-referral-fee-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Amazon</p>
+<h1>Amazon Referral Fee Calculator</h1>
+<p class="mut">Work out Amazon's referral fee on a single sale by category, including the $0.30 minimum and the media closing fee where it applies.</p>
+<div class="card">
+<label>Sale price ($) <input id="price" type="number" value="40" min="0" step="0.01"></label><br><label>Category rate <select id="rate"><option value="0.15" selected>Most categories — 15%</option><option value="0.08">Electronics &amp; Computers — 8%</option><option value="0.20">Jewelry — 20%</option><option value="0.45">Amazon Device Accessories — 45%</option></select></label><br><label><input id="media" type="checkbox"> Media item — add the $1.80 closing fee (books, music, video, software)</label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The result isolates Amazon's selling fee — the referral fee every Amazon sale pays — from everything else. It is not profit: product cost, fulfillment or shipping, storage and advertising still come out of the amount you keep. Use it to compare categories before you list, since the same price can carry a very different fee in another category.</p>
+<script>
+function calc(){var p=parseFloat(document.getElementById('price').value);var r=parseFloat(document.getElementById('rate').value);var media=document.getElementById('media').checked;var o=document.getElementById('out');if(isNaN(p)||p<0){o.textContent='Enter a sale price of $0 or more.';return;}var ref=Math.max(p*r,0.30);ref=Math.round(ref*100)/100;var closing=media?1.80:0;var total=Math.round((ref+closing)*100)/100;var keep=Math.round((p-total)*100)/100;o.textContent='Referral fee: $'+ref.toFixed(2)+(media?' + Closing fee: $1.80':'')+' = Total Amazon selling fee: $'+total.toFixed(2)+' — You keep: $'+keep.toFixed(2)+' (before product, fulfillment and other costs).';}
+["price", "rate", "media"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Referral fee = category rate × total sale price, or $0.30, whichever is greater. Media items add a $1.80 closing fee per item. Total Amazon selling fee = referral fee + closing fee (media only).</p>
+<h2>How it works</h2><p>Enter the total price the buyer pays, including any shipping you charge, because the referral fee is calculated on the total sale price, not the item price alone. Pick the category rate closest to your product; several categories use tiered rates that change at price thresholds, so if your category is tiered, enter the rate that applies at your price or check Seller Central. Tick the media box only for books, music, video, DVD and software items.</p>
+<h2>Worked example</h2><p>A $40 item in a 15% category: the referral fee is 15% of $40.00 = $6.00, which is above the $0.30 minimum, so you keep $34.00 before product and fulfillment costs. A $1.50 item in the same category: 15% is $0.225, which is below the $0.30 minimum, so the minimum $0.30 applies. At $4.00, 15% is $0.60, which is above the minimum, so $0.60 applies.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>What is Amazon&#x27;s standard referral fee?</h3><p>15% of the total sale price in most categories, with a $0.30 minimum per item. Electronics and computers pay 8%, while some categories pay more or use tiered rates.</p><h3>Is the referral fee charged on shipping?</h3><p>Yes. It is calculated on the total sale price, which includes the item price plus shipping charged to the buyer and gift wrap, but not sales tax.</p><h3>What is the $1.80 closing fee?</h3><p>A per-item fee added on media categories — books, music, video, DVD and software — on top of the referral fee. It does not apply to non-media products.</p><h3>Does the referral fee depend on my selling plan?</h3><p>No. Both Individual and Professional sellers pay the same referral fee; the plans differ in that Individual sellers pay $0.99 per item sold while Professional sellers pay $39.99 per month with no per-item plan fee.</p><h3>Why is my category rate different from 15%?</h3><p>Amazon sets referral rates by category and sometimes by price band within a category. Check your product's category in Seller Central's fee schedule, since a misclassified listing can be charged at the wrong rate.</p>
+</section>
+<p class="mut">Stand: October 2026. Structure per <a href="https://sell.amazon.com/blog/ask/fees-selling-on-amazon">Amazon — fees associated with selling on Amazon</a>; category percentages are the published Seller Central schedule — confirm your category's current rate in Seller Central before pricing.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="amazon-fba-profit-calculator.html">Amazon FBA Profit Calculator</a></p><p><a href="walmart-marketplace-fee-calculator.html">Walmart Marketplace Fee Calculator</a></p><p><a href="profit-margin-calculator.html">Profit Margin Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

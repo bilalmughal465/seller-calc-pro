@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon FBA Profit Calculator - SellerCalc</title>
+<meta name="description" content="Work out the profit on one Amazon FBA sale: sale price minus product cost, referral fee, fulfillment fee and any other per-unit cost.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/amazon-fba-profit-calculator.html">
+<meta property="og:title" content="Amazon FBA Profit Calculator - SellerCalc">
+<meta property="og:description" content="Work out the profit on one Amazon FBA sale: sale price minus product cost, referral fee, fulfillment fee and any other per-unit cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/amazon-fba-profit-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Amazon FBA Profit Calculator",
+"description": "Work out the profit on one Amazon FBA sale: sale price minus product cost, referral fee, fulfillment fee and any other per-unit cost.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is the Amazon referral fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A percentage of the total sale price set by category \u2014 15% in most categories, 8% for electronics and computers \u2014 with a $0.30 minimum per item. Some categories use tiered rates that change at price thresholds."
+}
+},
+{
+"@type": "Question",
+"name": "Why do I enter the FBA fulfillment fee myself?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Because it depends on your product's size tier, shipping weight and price band, and Amazon adjusts it seasonally, including peak rates from mid-October to mid-January and a fuel surcharge added in 2026. Your exact fee is on Amazon's FBA rate card and Revenue Calculator."
+}
+},
+{
+"@type": "Question",
+"name": "Is the $39.99 Professional plan fee included?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. That is a monthly fee, not a per-unit fee, so divide it by your expected monthly units and add it to your other per-unit costs if you want it reflected here."
+}
+},
+{
+"@type": "Question",
+"name": "What about storage fees?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Monthly storage is charged per cubic foot on the inventory you hold, at a higher rate from October to December, so it is not a fixed per-unit number. Estimate your monthly storage, divide by units sold, and add it as an other per-unit cost."
+}
+},
+{
+"@type": "Question",
+"name": "Does this calculator include advertising?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Sponsored Products spend and any promotions come after this per-unit profit, so subtract your average ad cost per unit before you call a product a winner."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Amazon FBA Profit Calculator",
+"item": "https://seller-calc-pro.com/calculators/amazon-fba-profit-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Amazon</p>
+<h1>Amazon FBA Profit Calculator</h1>
+<p class="mut">Work out the profit on one Amazon FBA sale: sale price minus product cost, referral fee, fulfillment fee and any other per-unit cost.</p>
+<div class="card">
+<label>Sale price ($) <input id="price" type="number" value="29.99" min="0" step="0.01"></label><br><label>Product cost per unit ($) <input id="cost" type="number" value="8" min="0" step="0.01"></label><br><label>Referral fee rate (%) <input id="ref" type="number" value="15" min="0" max="100" step="0.1"></label><br><label>FBA fulfillment fee per unit ($) <input id="fba" type="number" value="5" min="0" step="0.01"></label><br><label>Other per-unit costs ($) <input id="other" type="number" value="0" min="0" step="0.01"></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The result shows profit per unit after the costs you can see on every sale, plus the margin as a share of the sale price. It does not include the $39.99 monthly Professional plan fee, storage, inbound placement, returns or advertising, so spread those across your monthly units separately — a per-unit profit that looks healthy can still shrink once monthly costs are added.</p>
+<script>
+function calc(){var p=parseFloat(document.getElementById('price').value);var c=parseFloat(document.getElementById('cost').value)||0;var r=parseFloat(document.getElementById('ref').value)||0;var f=parseFloat(document.getElementById('fba').value)||0;var t=parseFloat(document.getElementById('other').value)||0;var o=document.getElementById('out');if(isNaN(p)||p<=0||c<0||r<0||r>100||f<0||t<0){o.textContent='Enter a sale price above $0, a referral rate between 0 and 100, and costs of $0 or more.';return;}var refFee=Math.max(p*r/100,0.30);refFee=Math.round(refFee*100)/100;var profit=Math.round((p-c-refFee-f-t)*100)/100;var margin=Math.round(profit/p*1000)/10;o.textContent='Referral fee: $'+refFee.toFixed(2)+' — Profit per unit: $'+profit.toFixed(2)+' — Margin: '+margin.toFixed(1)+'% of the sale price.';}
+["price", "cost", "ref", "fba", "other"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Referral fee = referral rate × sale price, with a $0.30 minimum per item. Profit per unit = sale price − product cost − referral fee − FBA fulfillment fee − other per-unit costs. Margin = profit per unit ÷ sale price × 100.</p>
+<h2>How it works</h2><p>Enter the price the buyer pays, what the unit costs you landed, and your category's referral rate — 15% covers most categories, 8% covers electronics and computers. Enter your FBA fulfillment fee from Amazon's current rate card for your size tier and weight; this calculator deliberately leaves it as an input because the fee varies by size, weight and price band and changes during peak season. Add any other per-unit cost, such as prep or inserts, in the last field.</p>
+<h2>Worked example</h2><p>A $29.99 item costing $8.00, at a 15% referral rate with a $5.00 fulfillment fee: the referral fee is 15% of $29.99 = $4.50 (above the $0.30 minimum). Profit is $29.99 − $8.00 − $4.50 − $5.00 = $12.49 per unit, and the margin is $12.49 ÷ $29.99 = 41.6%.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>What is the Amazon referral fee?</h3><p>A percentage of the total sale price set by category — 15% in most categories, 8% for electronics and computers — with a $0.30 minimum per item. Some categories use tiered rates that change at price thresholds.</p><h3>Why do I enter the FBA fulfillment fee myself?</h3><p>Because it depends on your product's size tier, shipping weight and price band, and Amazon adjusts it seasonally, including peak rates from mid-October to mid-January and a fuel surcharge added in 2026. Your exact fee is on Amazon's FBA rate card and Revenue Calculator.</p><h3>Is the $39.99 Professional plan fee included?</h3><p>No. That is a monthly fee, not a per-unit fee, so divide it by your expected monthly units and add it to your other per-unit costs if you want it reflected here.</p><h3>What about storage fees?</h3><p>Monthly storage is charged per cubic foot on the inventory you hold, at a higher rate from October to December, so it is not a fixed per-unit number. Estimate your monthly storage, divide by units sold, and add it as an other per-unit cost.</p><h3>Does this calculator include advertising?</h3><p>No. Sponsored Products spend and any promotions come after this per-unit profit, so subtract your average ad cost per unit before you call a product a winner.</p>
+</section>
+<p class="mut">Stand: October 2026. Referral structure and Professional plan price per <a href="https://sell.amazon.com/blog/ask/fees-selling-on-amazon">Amazon — fees associated with selling on Amazon</a>; category percentages and fulfillment tiers are published Seller Central rates that change seasonally — confirm your ASIN's fees in Seller Central's Revenue Calculator before pricing. FBA tiers are intentionally entered by the user rather than hard-coded.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="amazon-referral-fee-calculator.html">Amazon Referral Fee Calculator</a></p><p><a href="profit-margin-calculator.html">Profit Margin Calculator</a></p><p><a href="fba-storage-fee-calculator.html">FBA Storage Fee Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>

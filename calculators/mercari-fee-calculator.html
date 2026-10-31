@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercari Fee Calculator - SellerCalc</title>
+<meta name="description" content="Work out Mercari's 10% selling fee on an item plus buyer-paid shipping, and what lands in your payout before your own costs.">
+<link rel="canonical" href="https://seller-calc-pro.com/calculators/mercari-fee-calculator.html">
+<meta property="og:title" content="Mercari Fee Calculator - SellerCalc">
+<meta property="og:description" content="Work out Mercari's 10% selling fee on an item plus buyer-paid shipping, and what lands in your payout before your own costs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seller-calc-pro.com/calculators/mercari-fee-calculator.html"><meta property="og:image" content="https://seller-calc-pro.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/variant.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('sellercalc-theme')||'light'}catch(e){}</script>
+<style>html{background:#F8FAFC}body{background-color:#F8FAFC}
+a{color:#1D4ED8;text-decoration:underline}
+.card input,.card select{border:1px solid #64748B;border-radius:6px;padding:6px 8px}
+.card button{background:#1D4ED8;color:#fff;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;font-weight:600}
+.result{color:#172554;font-weight:700}
+.cta-btn{background:#F97316 !important;color:#0F172A !important;text-decoration:none !important;border-radius:8px;padding:12px 22px;display:inline-block;font-weight:700}
+.cta-btn:hover{background:#EA580C !important}
+</style>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebApplication",
+"name": "Mercari Fee Calculator",
+"description": "Work out Mercari's 10% selling fee on an item plus buyer-paid shipping, and what lands in your payout before your own costs.",
+"applicationCategory": "CalculatorApplication",
+"operatingSystem": "Web"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is Mercari's selling fee?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "10% of the item price plus any shipping the buyer pays, charged only when an item sells. There is no separate seller payment-processing fee on current listings."
+}
+},
+{
+"@type": "Question",
+"name": "Does the 10% fee apply to shipping?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes, when the buyer pays shipping, that shipping amount is included in the fee base. On a $50 item with $5 buyer-paid shipping the fee is $5.50, not $5.00."
+}
+},
+{
+"@type": "Question",
+"name": "Is listing on Mercari free?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. There is no listing fee, monthly fee or setup fee; you only pay the selling fee when an item sells."
+}
+},
+{
+"@type": "Question",
+"name": "What does the buyer pay on Mercari?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The buyer pays a 3.6% Buyer Protection fee on the item price plus buyer-paid shipping, on top of the item and shipping. That fee is not deducted from your payout."
+}
+},
+{
+"@type": "Question",
+"name": "What if I offer free shipping?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Then the fee applies to the item price only, but any label you buy comes out of your payout, so enter it in the label-cost field to see the true remainder."
+}
+}
+]
+}
+]
+}</script>
+<script type="application/ld+json">{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://seller-calc-pro.com/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Mercari Fee Calculator",
+"item": "https://seller-calc-pro.com/calculators/mercari-fee-calculator.html"
+}
+]
+}</script>
+</head>
+<body>
+<header><div class="wrap nav-classic"><a class="logo" href="../index.html"><span class="mix">SellerCalc</span></a><nav class="nav-links"><a href="../index.html"><span class="mix">Home</span></a><a href="../index.html#categories"><span class="mix">Calculators</span></a><a href="../index.html#guides"><span class="mix">Guides</span></a><a href="../about.html"><span class="mix">About</span></a><a href="../contact.html"><span class="mix">Contact</span></a></nav></div></header>
+<main class="wrap">
+<p class="cat">Mercari</p>
+<h1>Mercari Fee Calculator</h1>
+<p class="mut">Work out Mercari's 10% selling fee on an item plus buyer-paid shipping, and what lands in your payout before your own costs.</p>
+<div class="card">
+<label>Item price ($) <input id="price" type="number" value="50" min="0" step="0.01"></label><br><label>Shipping the buyer pays ($) <input id="ship" type="number" value="5" min="0" step="0.01"></label><br><label>Label cost you pay yourself ($) <input id="label" type="number" value="0" min="0" step="0.01"></label>
+<br><button onclick="calc()">Calculate</button>
+<div class="result" id="out">—</div>
+</div>
+<p>The result shows the 10% selling fee and the payout that remains after that fee and any label cost you pay yourself. The buyer also pays a 3.6% Buyer Protection fee at checkout, but that is charged to the buyer, not deducted from your payout. Your item cost and packaging still come out of the payout.</p>
+<script>
+function calc(){var p=parseFloat(document.getElementById('price').value);var s=parseFloat(document.getElementById('ship').value)||0;var l=parseFloat(document.getElementById('label').value)||0;var o=document.getElementById('out');if(isNaN(p)||p<0||s<0||l<0){o.textContent='Enter amounts of $0 or more for price, shipping and label cost.';return;}var fee=Math.round((p+s)*0.10*100)/100;var payout=Math.round((p+s-fee-l)*100)/100;o.textContent='Mercari fee (10%): $'+fee.toFixed(2)+' — Payout before item cost: $'+payout.toFixed(2)+'.';}
+["price", "ship", "label"].forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);el.addEventListener('change',calc);}});
+calc();
+</script>
+<h2>Formula</h2><p>Mercari selling fee = 10% × (item price + shipping the buyer pays). Payout = item price + shipping the buyer pays − selling fee − label cost you pay yourself.</p>
+<h2>How it works</h2><p>Enter the item price and, separately, any shipping the buyer pays, because Mercari charges its 10% on the two combined. If you pay for the label yourself instead of passing shipping to the buyer, enter that label cost in the third field so it is subtracted from your payout. Listing is free, so there is no listing fee to add.</p>
+<h2>Worked example</h2><p>A $50 item with $5 of buyer-paid shipping: the fee base is $55.00, so the fee is 10% of $55.00 = $5.50, and the payout is $55.00 − $5.50 = $49.50 before your item cost. If you had instead paid a $5 label yourself with no buyer-paid shipping, the fee would be 10% of $50.00 = $5.00 and the payout would be $50.00 − $5.00 − $5.00 = $40.00.</p>
+<h2>FAQs</h2>
+<section class="faq">
+<h3>What is Mercari&#x27;s selling fee?</h3><p>10% of the item price plus any shipping the buyer pays, charged only when an item sells. There is no separate seller payment-processing fee on current listings.</p><h3>Does the 10% fee apply to shipping?</h3><p>Yes, when the buyer pays shipping, that shipping amount is included in the fee base. On a $50 item with $5 buyer-paid shipping the fee is $5.50, not $5.00.</p><h3>Is listing on Mercari free?</h3><p>Yes. There is no listing fee, monthly fee or setup fee; you only pay the selling fee when an item sells.</p><h3>What does the buyer pay on Mercari?</h3><p>The buyer pays a 3.6% Buyer Protection fee on the item price plus buyer-paid shipping, on top of the item and shipping. That fee is not deducted from your payout.</p><h3>What if I offer free shipping?</h3><p>Then the fee applies to the item price only, but any label you buy comes out of your payout, so enter it in the label-cost field to see the true remainder.</p>
+</section>
+<p class="mut">Stand: October 2026. Source: <a href="https://www.mercari.com/us/help_center/article/169/">Mercari Help Center — Fees on Mercari</a>.</p>
+<p class="mut">Disclaimer: Results are estimates and general information only, not tax or financial advice. Fees change, so check the platform's current fee schedule before you price an item.</p>
+<h2>Related calculators</h2>
+<p><a href="poshmark-fee-calculator.html">Poshmark Fee Calculator</a></p><p><a href="whatnot-fee-calculator.html">Whatnot Fee Calculator</a></p><p><a href="mercari-profit-calculator.html">Mercari Profit Calculator</a></p>
+<div class="feat-grid"><div><b>Fast results</b><p>Instant result, no sign-up.</p></div><div><b>Free to use</b><p>All tools are free.</p></div><div><b>Formula shown on the page</b><p>Each page shows the formula it uses, so you can check the result yourself.</p></div><div><b>Works on mobile</b><p>Built for phone browsers.</p></div></div>
+<section class="cta-grad"><h2>Compare more seller fees</h2><p>Run the same sale through another marketplace calculator and keep the one that leaves you more.</p><p><a class="cta-btn" href="../index.html#categories"><span class="mix">Browse all calculators</span></a></p></section>
+</main>
+<footer><div class="wrap footer-grid"><div><b>SellerCalc</b><p>SellerCalc — Free fee, profit and shipping calculators for US online sellers. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../index.html#guides">Guides</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div><div><b>Categories</b><a href="etsy-fee-calculator.html">Etsy</a><a href="ebay-final-value-fee-calculator.html">eBay</a><a href="amazon-fba-profit-calculator.html">Amazon</a><a href="shipping-cost-comparison-calculator.html">Shipping</a><a href="tiktok-shop-fee-calculator.html">TikTok Shop</a><a href="print-on-demand-profit-calculator.html">Print on Demand</a><a href="dropshipping-margin-calculator.html">Dropshipping</a><a href="handmade-pricing-calculator.html">Handmade</a><a href="wholesale-margin-calculator.html">Wholesale</a></div><div><b>Legal</b><a href="../how-our-calculators-are-checked.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<script src="../assets/theme.js"></script>
+<script src="../assets/engage.js"></script>
+<script src="../assets/chatbot.js"></script>
+</body>
+</html>
