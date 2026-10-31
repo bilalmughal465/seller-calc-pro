@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://seller-calc-pro.com/sitemap.xml
+Sitemap: https://seller-calc-pro.pages.dev/sitemap.xml
