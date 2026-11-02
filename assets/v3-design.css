@@ -148,3 +148,5 @@ main p, main li, main section p, .faq p, .card p, .tool p, .calc-card p, .cat-bo
 
 /* v6 CTA span fix (Bilal 2026-11-01): .mix span inside the orange CTA button was orange-on-orange; force dark text, logo .mix untouched */
 .cta-btn .mix, .cta-grad .cta-btn .mix {color:#0B1526!important; -webkit-text-fill-color:#0B1526!important; background:none!important}
+/* FIX 2026-11-02 (Bilal): even table rows are near-white (#EFF6FF) but table text is light, so row text was invisible. Dark text on even rows only; header (dark bg, white text) and odd rows (dark bg, light text) untouched. */
+tr:nth-child(even) td{color:#0F172A!important}
